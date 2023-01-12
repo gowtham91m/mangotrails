@@ -4,8 +4,10 @@ import {
     NavMenu,
     NavLink,
 } from './NavbarElements';
+import ToggleSwitch from '../ToggleSwitch/ToggleSwitch'
 import LinkedInTile from '../../images/linkedin-tile.svg'
-const Navbar = () => {
+
+const Navbar = ({toggleTheme}) => {
     return (
         <>
             <Nav>
@@ -17,6 +19,7 @@ const Navbar = () => {
                     <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
                     <ul><a href='https://www.linkedin.com/in/gowtham-mallikarjuna/' target="_blank">
                         <img src={LinkedInTile} style={{ height: 25, width: 25 }} ></img></a></ul>
+                    <ul><ToggleSwitch toggleTheme={toggleTheme}/></ul>
                 </NavMenu>
             </Nav>
         </>

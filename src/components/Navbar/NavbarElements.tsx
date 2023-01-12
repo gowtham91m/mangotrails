@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 
 export const NavLink = styled(Link)`
 text-decoration: None;
-color: black;
+color: ${(props) => props.theme.text};
 `
 
 export const Bars = styled.div`
