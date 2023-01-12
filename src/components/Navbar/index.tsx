@@ -1,12 +1,10 @@
 import React from 'react';
 import {
     Nav,
-    Bars,
     NavMenu,
-    NavBtn,
-    NavLink
+    NavLink,
 } from './NavbarElements';
-
+import LinkedInTile from '../../images/linkedin-tile.svg'
 const Navbar = () => {
     return (
         <>
@@ -17,6 +15,8 @@ const Navbar = () => {
                     <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
                     <ul><NavLink to={'/artroom'}>Artroom</NavLink></ul>
                     <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
+                    <ul><a href='https://www.linkedin.com/in/gowtham-mallikarjuna/' target="_blank">
+                        <img src={LinkedInTile} style={{ height: 25, width: 25 }} ></img></a></ul>
                 </NavMenu>
             </Nav>
         </>
