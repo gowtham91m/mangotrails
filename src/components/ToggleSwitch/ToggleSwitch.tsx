@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./ToggleSwitch.css";
 
-function ToggleSwitch({toggleTheme}) {
+type Props = {
+    toggleTheme:() => void;
+}
+
+const ToggleSwitch: React.FC<Props>= ({toggleTheme}) => {
     const [isToggled, setIsToggled] = useState(false);
 
     const onToggle = () => {

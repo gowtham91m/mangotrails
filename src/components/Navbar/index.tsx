@@ -7,7 +7,12 @@ import {
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch'
 import LinkedInTile from '../../images/linkedin-tile.svg'
 
-const Navbar = ({toggleTheme}) => {
+
+type Props = {
+    toggleTheme: () => void;
+}
+
+const Navbar: React.FC<Props> = ({toggleTheme}) => {
     return (
         <>
             <Nav>
