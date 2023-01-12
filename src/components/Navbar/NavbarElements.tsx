@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 export const Nav = styled.nav`
   height: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 20px;
   z-index: 12;
 `;
 
@@ -31,8 +33,6 @@ export const Bars = styled.div`
 
 export const NavMenu = styled.div`
   display: flex;
-  /* width: 100vw;
-  white-space: nowrap; */
   @media screen and (max-width: 768px) {
     display: none;
     
