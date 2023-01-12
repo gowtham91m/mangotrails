@@ -16,7 +16,6 @@ const About = () => {
 const Imgdiv = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 100px;
   > img {
     width :1300px ;
     }

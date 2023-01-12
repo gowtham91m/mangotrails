@@ -12,6 +12,12 @@ export const Nav = styled.nav`
   z-index: 12;
 `;
 
+export const NavContact = styled.div`
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+`
+
 export const NavLink = styled(Link)`
 text-decoration: None;
 color: ${(props) => props.theme.text};
