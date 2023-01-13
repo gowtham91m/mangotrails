@@ -1,31 +1,24 @@
 import React from 'react';
 import styled from "styled-components";
-import WordCloud from '../images/WordCloud.png'
+import WordCloud from '../components/Wordcloud';
 
 const About = () => {
     return (
         <div>
-            <Imgdiv>
-          <img src={WordCloud} />
-            </Imgdiv>
+          <Imagediv>
+          <WordCloud/>
+        </Imagediv>
         </div>
     );
 };
 
 
-const Imgdiv = styled.div`
+const Imagediv = styled.div`
   display: flex;
   justify-content: center;
-  > img {
-    width :1300px ;
-    }
-    
-  @media only screen and (max-width: 1000px) {
-      > img {
-        width : 1000px;
-      }
-    }
-  }
+  padding-top:10%;
+  padding-left: 25%;
+  padding-right: 10%;
 `;
 
 export default About;
