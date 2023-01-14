@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ToggleSwitch.css";
+import {VscColorMode} from 'react-icons/vsc'
 
 type Props = {
     toggleTheme:() => void;
@@ -14,10 +14,7 @@ const ToggleSwitch: React.FC<Props>= ({toggleTheme}) => {
     };
 
     return (
-        <label className="toggle-switch">
-            <input type="checkbox" checked={isToggled} onChange={onToggle} />
-            <span className="switch" />
-        </label>
+        <VscColorMode onClick={onToggle} size='25px'/>
     );
 }
 

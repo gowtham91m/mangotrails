@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import GlobalStyle from './globalStyles';
 import styled, { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
 import Navbar from './components/Navbar';
 import About from './pages';
 import Experience from './pages/Experience';
@@ -15,7 +15,7 @@ export const lightTheme = {
   text: '#1c1c1c',
 };
 export const darkTheme = {
-  body: '#1c1c1c',
+  body: '#000000',
   text: '#f1f1f1'
 };
 
@@ -31,6 +31,7 @@ function App() {
     <ThemeProvider theme={isDarkTheme?darkTheme:lightTheme}>
     <StyledApp>
       <Router>
+          <GlobalStyle />
         <Navbar toggleTheme={toggleTheme}/>
         <Routes>
           <Route path='/' element={<About />} />

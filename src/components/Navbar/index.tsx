@@ -5,7 +5,7 @@ import {
     NavLink,
     NavContact
 } from './NavbarElements';
-import ToggleSwitch from '../ToggleSwitch/ToggleSwitch'
+import ToggleSwitch from '../ToggleSwitch'
 import LinkedInTile from '../../images/LinkedinTile.svg'
 import Github from '../../images/Github.svg'
 import ProfilePic from '../../images/ProfilePic.png'
@@ -15,13 +15,14 @@ type Props = {
     toggleTheme: () => void;
 }
 
-const Contact = () => {
+const Contact: React.FC<Props> = ({ toggleTheme }) => {
     return (
         <NavContact>
             <a href='https://www.linkedin.com/in/gowtham-mallikarjuna/' target="_blank">
                 <img src={LinkedInTile} style={{ height: 25, width: 25 }} ></img></a>
             <a href='https://github.com/gowtham91m' target="_blank">
                 <img src={Github} style={{ height: 25, width: 25 }} ></img></a>
+            <ToggleSwitch toggleTheme={toggleTheme} />
         </NavContact>
     )
 }
@@ -37,8 +38,7 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
                     <ul><NavLink to={'/artroom'}>Artroom</NavLink></ul>
                     <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
-                    <ul><Contact /></ul>
-                    <ul><ToggleSwitch toggleTheme={toggleTheme} /></ul>
+                    <ul><Contact toggleTheme={toggleTheme} /></ul>
                 </NavMenu>
             </Nav>
         </>

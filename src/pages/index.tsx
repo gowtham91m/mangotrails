@@ -18,7 +18,7 @@ const Imagediv = styled.div`
   justify-content: center;
   padding-top:10%;
   padding-left: 25%;
-  padding-right: 10%;
+  padding-right: 25%;
 `;
 
 export default About;
