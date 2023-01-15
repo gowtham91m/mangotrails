@@ -7,3 +7,14 @@ const GlobalStyle = createGlobalStyle`
 }`
 
 export default GlobalStyle;
+
+
+export const Container = styled.div`
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    @media screen and (max-width: 991px) {
+        padding-right: 30px;
+        padding-left: 30px;
+  }
+`

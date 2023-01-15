@@ -12,7 +12,7 @@ import Leasure from './pages/Artroom';
 
 export const lightTheme = {
   body: '#f1f1f1',
-  text: '#1c1c1c',
+  text: '#1c1c1c'
 };
 export const darkTheme = {
   body: '#000000',

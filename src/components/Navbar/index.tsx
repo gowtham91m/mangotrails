@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Nav,
-    NavMenu,
+    NavContainer,
+    NavLogo,
+    NavName,
+    NavTabs,
     NavLink,
-    NavContact
+    NavContact,
+    MobileMenuIcon,
+    MobileNavTabs,
+    MobileNavContainer,
 } from './NavbarElements';
 import ToggleSwitch from '../ToggleSwitch'
 import LinkedInTile from '../../images/LinkedinTile.svg'
 import Github from '../../images/Github.svg'
+import { CgMenuMotion } from 'react-icons/cg';
 import ProfilePic from '../../images/ProfilePic.png'
+
+
 
 
 type Props = {
@@ -23,23 +32,53 @@ const Contact: React.FC<Props> = ({ toggleTheme }) => {
             <a href='https://github.com/gowtham91m' target="_blank">
                 <img src={Github} style={{ height: 25, width: 25 }} ></img></a>
             <ToggleSwitch toggleTheme={toggleTheme} />
+            
         </NavContact>
     )
 }
 
+
+
 const Navbar: React.FC<Props> = ({ toggleTheme }) => {
+    const [isSideNavOpen, setSideNavOpen] = useState(true);
+    
     return (
         <>
             <Nav>
-                <img src={ProfilePic} style={{ height: 150, width: 150 }}></img>
-                <NavMenu>
-                    <ul><NavLink to={'/'}>About</NavLink></ul>
-                    <ul><NavLink to={'/experience'}>Experience</NavLink></ul>
-                    <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
-                    <ul><NavLink to={'/artroom'}>Artroom</NavLink></ul>
-                    <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
-                    <ul><Contact toggleTheme={toggleTheme} /></ul>
-                </NavMenu>
+                
+                <NavLogo>
+                    {/* <img src={ProfilePic} style={{ height: 150, width: 150 }}></img> */}
+                    <NavName>Gowtham</NavName>
+                </NavLogo>
+                
+
+                <MobileMenuIcon>
+                    <CgMenuMotion size={40} onClick={() => { setSideNavOpen(!isSideNavOpen) }} />
+                </MobileMenuIcon>
+
+                <NavContainer>
+                    <NavTabs>
+                        <ul><NavLink to={'/'}>About</NavLink></ul>
+                        <ul><NavLink to={'/experience'}>Experience</NavLink></ul>
+                        <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
+                        <ul><NavLink to={'/artroom'}>Artroom</NavLink></ul>
+                        <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
+                        <ul><Contact toggleTheme={toggleTheme} /></ul>
+                    </NavTabs>
+                </NavContainer>
+
+                {isSideNavOpen && (
+                    <MobileNavContainer>
+                        <MobileNavTabs>
+                            <ul><NavLink to={'/'}>About</NavLink></ul>
+                            <ul><NavLink to={'/experience'}>Experience</NavLink></ul>
+                            <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
+                            <ul><NavLink to={'/artroom'}>Artroom</NavLink></ul>
+                            <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
+                            <ul><Contact toggleTheme={toggleTheme} /></ul>
+                        </MobileNavTabs>
+                    </MobileNavContainer>
+                )}
             </Nav>
         </>
     );
