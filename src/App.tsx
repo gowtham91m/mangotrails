@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import GlobalStyle from './globalStyles';
 import styled, { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -8,6 +8,7 @@ import Codelab from './pages/Codelab';
 import Artroom from './pages/Artroom';
 import Leasure from './pages/Artroom';
 import whitebackground from './images/whitebackground.jpeg'
+import blackbckground from './images/blackbackground.jpeg'
 import { url } from 'inspector';
 
 
@@ -20,20 +21,36 @@ export const darkTheme = {
   text: '#f1f1f1'
 };
 
+const StyledApp = styled.div`
+  min-height: 100vh;
+  text-align: center;
+  color: ${(props) => props.theme.text};
+`
+
 function App() {
   const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
 
-  const toggleTheme = () => {
-    setTheme(isDarkTheme ? "light" : "dark")
+  useEffect(() => {
+    document.body.style.backgroundImage = `url(${whitebackground})`;
+    document.body.style.backgroundSize = "cover";
+  }, [])
+  
+  const setBackground = () => {
+    if (isDarkTheme) {
+      document.body.style.backgroundImage = `url(${whitebackground})`;
+      document.body.style.backgroundSize = "cover";
+    }
+    else {
+      document.body.style.backgroundImage = `url(${blackbckground})`;
+      document.body.style.backgroundSize = "cover";
+    }
   }
-  const StyledApp = styled.div`
-  min-height: 100vh;
-  text-align: center;
-  background-color: ${(props) => props.theme.body};
-  color: ${(props) => props.theme.text};
-`
 
+  const toggleTheme = () => {
+    setTheme(isDarkTheme ? "light" : "dark");
+    setBackground();
+  }
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
@@ -52,7 +69,5 @@ function App() {
     </ThemeProvider>
   );
 }
-
-
 
 export default App;

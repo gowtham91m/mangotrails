@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {VscColorMode} from 'react-icons/vsc'
+import { HiOutlineLightBulb } from 'react-icons/hi'
 
 type Props = {
     toggleTheme:() => void;
@@ -14,7 +14,7 @@ const ToggleSwitch: React.FC<Props>= ({toggleTheme}) => {
     };
 
     return (
-        <VscColorMode onClick={onToggle} size='25px'/>
+        <HiOutlineLightBulb onClick={onToggle} size='25px'/>
     );
 }
 
