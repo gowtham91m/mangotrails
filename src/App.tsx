@@ -7,17 +7,18 @@ import About from './pages';
 import Codelab from './pages/Codelab';
 import Artroom from './pages/Artroom';
 import Leasure from './pages/Artroom';
+import whitebackground from './images/whitebackground.jpeg'
+import { url } from 'inspector';
 
 
 export const lightTheme = {
-  body: '#f1f1f1',
-  text: '#1c1c1c'
+  body: `'#f1f1f1'`,
+  text: '#1c1c1c',
 };
 export const darkTheme = {
   body: '#000000',
   text: '#f1f1f1'
 };
-
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -26,9 +27,17 @@ function App() {
   const toggleTheme = () => {
     setTheme(isDarkTheme ? "light":"dark")
   }
+  const StyledApp = styled.div`
+  min-height: 100vh;
+  text-align: center;
+  background-color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
+`
+
+
   return (
     <ThemeProvider theme={isDarkTheme?darkTheme:lightTheme}>
-    <StyledApp>
+        <StyledApp>
       <Router>
           <GlobalStyle />
         <Navbar toggleTheme={toggleTheme}/>
@@ -44,11 +53,6 @@ function App() {
   );
 }
 
-const StyledApp = styled.div`
-  min-height: 100vh;
-  text-align: center;
-  background-color: ${(props)=> props.theme.body};
-  color: ${(props) => props.theme.text};
-`
+
 
 export default App;

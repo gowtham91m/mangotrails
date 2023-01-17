@@ -15,7 +15,16 @@ const About = () => {
           <HomeImage src={ProfilePic}></HomeImage>
         </HomeImageContainer>
         <Intro><span>`{constants.Intro}`</span></Intro>
-        <Experience>Expreience</Experience>
+        <Experience>
+          <div>
+            <ExperienceTitle>Experience</ExperienceTitle>
+            <ul>2012: Software developer at Accenture</ul>
+            <ul>2015: Master of Science in Information Systems at Oklahoma State University</ul>
+            <ul>2016: Data Analyst Intern and Oklahoma State University Alumni Association</ul>
+            <ul>2017: Data Scientist at LatentView Analytics</ul>
+            <ul>2019: Software Development Engineer at Amazon</ul>
+          </div>
+        </Experience>
       </HomeContainer>
     </>
   );
@@ -71,11 +80,21 @@ vertical-align: center;
 `;
 
 const Experience = styled.div`
-justify-content: center;
-text-align: center;
-display:flex;
+display: block;
+text-align:left;
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 30%;
 grid-area: Experience;
-background-color: gray;
+@media screen and (max-width: 767px){
+  padding-left: 0;
+  padding-right: 5%;
+  padding-botton:10px;
+}
 `;
+
+const ExperienceTitle = styled.h1`
+  padding-left:40px;
+`
 export default About;
 
