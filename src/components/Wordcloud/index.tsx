@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactWordcloud, {OptionsProp} from 'react-wordcloud';
+import Cloud from 'react-wordcloud';
 import words from './words';
 
 const options: OptionsProp = {
     colors: ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"],
     enableTooltip: false,
-    deterministic: true,
+    deterministic: false,
     fontFamily: "Courier",
     fontSizes: [20, 60],
     fontStyle: "normal",
@@ -20,9 +21,7 @@ const options: OptionsProp = {
 
 
 const WordCloud= ()=> {
-    return <ReactWordcloud 
-        options={options}
-    words={words} />
+    return <ReactWordcloud options={options} words={words} /> 
 }
 
 export default WordCloud;

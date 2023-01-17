@@ -40,7 +40,7 @@ const Contact: React.FC<Props> = ({ toggleTheme }) => {
 
 
 const Navbar: React.FC<Props> = ({ toggleTheme }) => {
-    const [isSideNavOpen, setSideNavOpen] = useState(true);
+    const [isSideNavOpen, setSideNavOpen] = useState(false);
     
     return (
         <>
@@ -59,7 +59,6 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                 <NavContainer>
                     <NavTabs>
                         <ul><NavLink to={'/'}>About</NavLink></ul>
-                        <ul><NavLink to={'/experience'}>Experience</NavLink></ul>
                         <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
                         <ul><NavLink to={'/artroom'}>Artroom</NavLink></ul>
                         <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>

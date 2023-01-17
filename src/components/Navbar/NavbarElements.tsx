@@ -1,7 +1,6 @@
 
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
-import { Container } from '../../globalStyles';
 
 export const Nav = styled.nav`
   height: 50px;
@@ -84,7 +83,7 @@ export const MobileNavContainer = styled.div`
   width: 70%;
   display: flex;
   background-color:black;
-  opacity: 97%;
+  opacity: 85%;
   z-index:997;
 }
 `
