@@ -10,6 +10,7 @@ import {
     MobileMenuIcon,
     MobileNavTabs,
     MobileNavContainer,
+    Backdrop
 } from './NavbarElements';
 import ToggleSwitch from '../ToggleSwitch'
 import LinkedInTile from '../../images/LinkedinTile.svg'
@@ -44,16 +45,15 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
     
     return (
         <>
-            <Nav>
+            <Nav onClick={() => { setSideNavOpen(!isSideNavOpen) }} >
                 
                 <NavLogo>
-                    {/* <img src={ProfilePic} style={{ height: 150, width: 150 }}></img> */}
                     <NavName>Gowtham</NavName>
                 </NavLogo>
                 
 
                 <MobileMenuIcon>
-                    <CgMenuMotion size={40} onClick={() => { setSideNavOpen(!isSideNavOpen) }} />
+                    <CgMenuMotion size={40}/>
                 </MobileMenuIcon>
 
                 <NavContainer>
@@ -66,7 +66,11 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     </NavTabs>
                 </NavContainer>
 
+                
+
                 {isSideNavOpen && (
+                    <>
+                    <Backdrop onClick={() => { setSideNavOpen(!isSideNavOpen) }} />
                     <MobileNavContainer>
                         <MobileNavTabs>
                             <ul><NavLink to={'/'}>About</NavLink></ul>
@@ -77,6 +81,7 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                             <ul><Contact toggleTheme={toggleTheme} /></ul>
                         </MobileNavTabs>
                     </MobileNavContainer>
+                    </>
                 )}
             </Nav>
         </>

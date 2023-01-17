@@ -25,7 +25,7 @@ function App() {
   const isDarkTheme = theme === "dark";
 
   const toggleTheme = () => {
-    setTheme(isDarkTheme ? "light":"dark")
+    setTheme(isDarkTheme ? "light" : "dark")
   }
   const StyledApp = styled.div`
   min-height: 100vh;
@@ -36,19 +36,19 @@ function App() {
 
 
   return (
-    <ThemeProvider theme={isDarkTheme?darkTheme:lightTheme}>
-        <StyledApp>
-      <Router>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <StyledApp>
+        <Router>
           <GlobalStyle />
-        <Navbar toggleTheme={toggleTheme}/>
-        <Routes>
-          <Route path='/' element={<About />} />
-          <Route path='/codelab' element={<Codelab />}/>
-          <Route path='/artroom' element={<Artroom />} />
-          <Route path='/leasure' element={<Leasure/>}/>
-        </Routes>
+          <Navbar toggleTheme={toggleTheme} />
+          <Routes>
+            <Route path='/' element={<About />} />
+            <Route path='/codelab' element={<Codelab />} />
+            <Route path='/artroom' element={<Artroom />} />
+            <Route path='/leasure' element={<Leasure />} />
+          </Routes>
         </Router>
-    </StyledApp>
+      </StyledApp>
     </ThemeProvider>
   );
 }

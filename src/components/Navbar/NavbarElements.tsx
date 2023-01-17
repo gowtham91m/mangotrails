@@ -88,6 +88,21 @@ export const MobileNavContainer = styled.div`
 }
 `
 
+export const Backdrop = styled.div`
+  display:none;
+@media screen and (max-width: 767px){
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color:black;
+  opacity:0%;
+  z-index:996;
+}
+`
+
 export const MobileNavMenu = styled.div`
 display:none;
 @media screen and (max-width: 767px){
