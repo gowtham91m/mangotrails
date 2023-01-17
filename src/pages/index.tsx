@@ -7,7 +7,6 @@ import ProfilePic from '../images/ProfilePic.png'
 
 
 const About = () => {
-  console.log(constants.Intro);
   return (
     <>
       <HomeContainer>
@@ -36,6 +35,7 @@ const HomeContainer = styled.div`
   padding-left:5%;
   padding-right:5%;
   padding-top:5%;
+  justify-content: center;
   grid-template-areas:
                       "HomeImageContainer Intro Intro Intro"
                       "Experience Experience Experience Experience";
