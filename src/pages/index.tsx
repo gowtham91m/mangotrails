@@ -7,6 +7,7 @@ import ProfilePic from '../images/ProfilePic.png'
 
 
 const About = () => {
+
   return (
     <>
       <HomeContainer>
@@ -16,35 +17,36 @@ const About = () => {
         <Intro><span>`{constants.About.Intro}`</span></Intro>
         <Experience>
             <h2>Professional Experience</h2>
-            <Timeline active={4} bulletSize={24} lineWidth={2}>
+            <Timeline active={10} bulletSize={24} lineWidth={2}>
               <Timeline.Item title="2012" >
-                <Text  size="lg">Accenture - Software Development Engineer</Text>
-                <Text size="md" mt={4}>CRM application development</Text>
+                <Text  size="lg">{constants.About.Experience["2012"].Position}</Text>
+              <Text size="md" mt={4}>{constants.About.Experience["2012"].Description}</Text>
               </Timeline.Item>
 
-              <Timeline.Item title="2015" >
-                <Text  size="lg">Oklohama State University - Master of Science in Information Systems</Text>
-                <Text size="md" mt={4}>Statistics and data analytics</Text>
-              </Timeline.Item>
+            <Timeline.Item title="2015" >
+              <Text size="lg">{constants.About.Experience["2015"].Position}</Text>
+              <Text size="md" mt={4}>{constants.About.Experience["2015"].Description}</Text>
+            </Timeline.Item>
 
               <Timeline.Item title="2016" >
-                <Text  size="lg">Oklahoma State University Alumni Association - Data Analyst Intern</Text>
-                <Text size="md" mt={4}>Manage alumni association database and provide data driven business insights</Text>
+              <Text size="lg">{constants.About.Experience["2016"].Position}</Text>
+              <Text size="md" mt={4}>{constants.About.Experience["2016"].Description}</Text>
               </Timeline.Item>
 
               <Timeline.Item title="2017" >
-                <Text  size="lg">Latent View Analytics - Data Scientist</Text>
-                <Text size="md" mt={4}>Perform statistical analysis on digital marketing experiential studies</Text>
+              <Text size="lg">{constants.About.Experience["2017"].Position}</Text>
+              <Text size="md" mt={4}>{constants.About.Experience["2017"].Description}</Text>
               </Timeline.Item>
 
             <Timeline.Item title="2019" lineVariant="dashed" >
-                <Text  size="lg">Amazon - Software Development Engineer</Text>
-                <Text size="md" mt={4}>Develop amazon pharmacy sign up flow</Text>
+              <Text size="lg">{constants.About.Experience["2019"].Position}</Text>
+              <Text size="md" mt={4}>{constants.About.Experience["2019"].Description}</Text>
               </Timeline.Item>
 
             <Timeline.Item title="2022" />
 
             </Timeline>
+
         </Experience>
       </HomeContainer>
     </>

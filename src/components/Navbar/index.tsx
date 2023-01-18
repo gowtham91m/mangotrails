@@ -60,7 +60,6 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     <NavTabs>
                         <ul><NavLink to={'/'}>About</NavLink></ul>
                         <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
-                        <ul><NavLink to={'/artroom'}>Artroom</NavLink></ul>
                         <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
                         <ul><Contact toggleTheme={toggleTheme} /></ul>
                     </NavTabs>
@@ -75,7 +74,6 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                         <MobileNavTabs>
                             <ul><NavLink to={'/'}>About</NavLink></ul>
                             <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
-                            <ul><NavLink to={'/artroom'}>Artroom</NavLink></ul>
                             <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
                             <ul><Contact toggleTheme={toggleTheme} /></ul>
                         </MobileNavTabs>
