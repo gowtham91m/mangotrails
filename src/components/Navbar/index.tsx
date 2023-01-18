@@ -7,18 +7,15 @@ import {
     NavTabs,
     NavLink,
     NavContact,
-    MobileMenuIcon,
     MobileNavTabs,
     MobileNavContainer,
-    Backdrop
+    Backdrop,
+    MobileNavContact
 } from './NavbarElements';
 import ToggleSwitch from '../ToggleSwitch'
-import LinkedInTile from '../../images/LinkedinTile.svg'
+import { AiOutlineLinkedin, AiFillGithub } from 'react-icons/ai'
 import Github from '../../images/Github.svg'
-import { CgMenuMotion } from 'react-icons/cg';
-import ProfilePic from '../../images/ProfilePic.png'
-
-
+import { FcMenu } from 'react-icons/fc';
 
 
 type Props = {
@@ -29,11 +26,10 @@ const Contact: React.FC<Props> = ({ toggleTheme }) => {
     return (
         <NavContact>
             <a href='https://www.linkedin.com/in/gowtham-mallikarjuna/' target="_blank">
-                <img src={LinkedInTile} style={{ height: 25, width: 25 }} ></img></a>
+                <AiOutlineLinkedin size={25} /></a>
             <a href='https://github.com/gowtham91m' target="_blank">
-                <img src={Github} style={{ height: 25, width: 25 }} ></img></a>
+                <AiFillGithub size={25} /></a>
             <ToggleSwitch toggleTheme={toggleTheme} />
-            
         </NavContact>
     )
 }
@@ -43,18 +39,27 @@ const Contact: React.FC<Props> = ({ toggleTheme }) => {
 const Navbar: React.FC<Props> = ({ toggleTheme }) => {
     const [isSideNavOpen, setSideNavOpen] = useState(false);
     
+    const MobileContact: React.FC<Props> = ({ toggleTheme }) => {
+        return (
+            <MobileNavContact>
+                <FcMenu size={30} onClick={() => { setSideNavOpen(!isSideNavOpen) }} />
+                <a href='https://www.linkedin.com/in/gowtham-mallikarjuna/' target="_blank">
+                    <AiOutlineLinkedin size={25}/></a>
+                <a href='https://github.com/gowtham91m' target="_blank">
+                    <AiFillGithub size={25} /></a>
+                <ToggleSwitch toggleTheme={toggleTheme} />
+
+            </MobileNavContact>
+        )
+    }
+
     return (
         <>
-            <Nav onClick={() => { setSideNavOpen(!isSideNavOpen) }} >
+            <Nav >
                 
                 <NavLogo>
                     <NavName>Gowtham</NavName>
                 </NavLogo>
-                
-
-                <MobileMenuIcon>
-                    <CgMenuMotion size={40}/>
-                </MobileMenuIcon>
 
                 <NavContainer>
                     <NavTabs>
@@ -65,7 +70,7 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     </NavTabs>
                 </NavContainer>
 
-                
+                <MobileContact toggleTheme={toggleTheme} />
 
                 {isSideNavOpen && (
                     <>
@@ -75,7 +80,6 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                             <ul><NavLink to={'/'}>About</NavLink></ul>
                             <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
                             <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
-                            <ul><Contact toggleTheme={toggleTheme} /></ul>
                         </MobileNavTabs>
                     </MobileNavContainer>
                     </>

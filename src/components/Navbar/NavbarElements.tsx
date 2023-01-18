@@ -45,7 +45,27 @@ export const NavContact = styled.div`
   display: flex;
   padding-right: 10px;
   justify-content: space-between;
+  @media screen and (max-width: 786px){
+    display:none;
+  }
 `
+
+export const MobileNavContact = styled.div`
+  display: none;
+  @media screen and (max-width: 786px){
+  position: fixed;
+  display: table-cell;
+  justify-content: center;
+  align-items: right;
+  right: 0px;
+  height: 20%;
+  width: 50px;
+  padding-right: 1%;
+  z-index:997;
+  }
+`
+
+
 
 export const NavTabs = styled.div`
   display: flex;
@@ -73,15 +93,16 @@ export const MobileNavContainer = styled.div`
   display:none;
 @media screen and (max-width: 767px){
   position: absolute;
+  display: flex;
   justify-content: center;
+  text-align:center;
+  align-items: center;
   border-radius: 60px;
-  top: 100px;
-  padding-right: 30px;
-  padding-top: 80px;
-  left: 50px;
+  top: 10%;
+  left: 10%;
   height: 40%;
   width: 70%;
-  display: flex;
+  padding-right: 10%;
   background-color:black;
   opacity: 85%;
   z-index:997;
