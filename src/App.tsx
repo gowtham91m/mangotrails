@@ -9,7 +9,7 @@ import Artroom from './pages/Artroom';
 import Leasure from './pages/Artroom';
 import whitebackground from './images/whitebackground.jpeg'
 import blackbckground from './images/blackbackground.jpeg'
-import { url } from 'inspector';
+import {MantineProvider} from '@mantine/core';
 
 
 export const lightTheme = {
@@ -20,6 +20,11 @@ export const darkTheme = {
   body: '#000000',
   text: '#f1f1f1'
 };
+
+// export const lightTheme = {
+//   colorScheme: 'dark',
+// };
+// export const darkTheme = { colorScheme: 'dark' }
 
 const StyledApp = styled.div`
   min-height: 100vh;
@@ -53,7 +58,8 @@ function App() {
   }
 
   return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+    // <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+    <MantineProvider theme={isDarkTheme ? { colorScheme: 'dark' } : { colorScheme: 'light' }} withGlobalStyles >
       <StyledApp>
         <Router>
           <GlobalStyle />
@@ -66,7 +72,8 @@ function App() {
           </Routes>
         </Router>
       </StyledApp>
-    </ThemeProvider>
+       </MantineProvider>
+    // </ThemeProvider>
   );
 }
 

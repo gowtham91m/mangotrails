@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import WordCloud from '../components/Wordcloud';
 import constants from '../Constants';
-
+import { Timeline, Text } from '@mantine/core';
 import ProfilePic from '../images/ProfilePic.png'
 
 
@@ -13,16 +13,38 @@ const About = () => {
         <HomeImageContainer>
           <HomeImage src={ProfilePic}></HomeImage>
         </HomeImageContainer>
-        <Intro><span>`{constants.Intro}`</span></Intro>
+        <Intro><span>`{constants.About.Intro}`</span></Intro>
         <Experience>
-          <div>
-            <ExperienceTitle>Experience</ExperienceTitle>
-            <ul>2012: Software developer at Accenture</ul>
-            <ul>2015: Master of Science in Information Systems at Oklahoma State University</ul>
-            <ul>2016: Data Analyst Intern and Oklahoma State University Alumni Association</ul>
-            <ul>2017: Data Scientist at LatentView Analytics</ul>
-            <ul>2019: Software Development Engineer at Amazon</ul>
-          </div>
+            <h2>Professional Experience</h2>
+            <Timeline active={4} bulletSize={24} lineWidth={2}>
+              <Timeline.Item title="2012" >
+                <Text  size="lg">Accenture - Software Development Engineer</Text>
+                <Text size="md" mt={4}>CRM application development</Text>
+              </Timeline.Item>
+
+              <Timeline.Item title="2015" >
+                <Text  size="lg">Oklohama State University - Master of Science in Information Systems</Text>
+                <Text size="md" mt={4}>Statistics and data analytics</Text>
+              </Timeline.Item>
+
+              <Timeline.Item title="2016" >
+                <Text  size="lg">Oklahoma State University Alumni Association - Data Analyst Intern</Text>
+                <Text size="md" mt={4}>Manage alumni association database and provide data driven business insights</Text>
+              </Timeline.Item>
+
+              <Timeline.Item title="2017" >
+                <Text  size="lg">Latent View Analytics - Data Scientist</Text>
+                <Text size="md" mt={4}>Perform statistical analysis on digital marketing experiential studies</Text>
+              </Timeline.Item>
+
+            <Timeline.Item title="2019" lineVariant="dashed" >
+                <Text  size="lg">Amazon - Software Development Engineer</Text>
+                <Text size="md" mt={4}>Develop amazon pharmacy sign up flow</Text>
+              </Timeline.Item>
+
+            <Timeline.Item title="2022" />
+
+            </Timeline>
         </Experience>
       </HomeContainer>
     </>
@@ -70,31 +92,27 @@ const Intro = styled.div`
 padding-top:10%;
 padding-left:5%;
 padding-right:5%;
+padding-bottom: 30px;
 font-size:18px;
 vertical-align: center;
   grid-area: Intro;
   @media screen and (max-width: 767px){
-    padding-top:8%;
-    height: 250px;
+    padding-top:0%;
+    padding-bottom: 20px;
+    height: 100%;
   }
 `;
 
 const Experience = styled.div`
 display: block;
 text-align:left;
-padding-top: 0px;
-padding-bottom: 0px;
+padding-bottom: 10px;
 padding-left: 30%;
 grid-area: Experience;
 @media screen and (max-width: 767px){
   padding-left: 0;
-  padding-right: 5%;
-  padding-botton:10px;
+  padding-bottom: 15%;;
 }
 `;
-
-const ExperienceTitle = styled.h1`
-  padding-left:40px;
-`
 export default About;
 
