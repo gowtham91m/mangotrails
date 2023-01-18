@@ -43,7 +43,7 @@ const About = () => {
               <Text size="md" mt={4}>{constants.About.Experience["2019"].Description}</Text>
               </Timeline.Item>
 
-            <Timeline.Item title="2022" />
+            <Timeline.Item title="2023" />
 
             </Timeline>
 

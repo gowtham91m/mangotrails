@@ -53,7 +53,7 @@ export const NavContact = styled.div`
 export const MobileNavContact = styled.div`
   display: none;
   @media screen and (max-width: 786px){
-  position: fixed;
+  position: absolute;
   display: table-cell;
   justify-content: center;
   align-items: right;
@@ -98,10 +98,10 @@ export const MobileNavContainer = styled.div`
   text-align:center;
   align-items: center;
   border-radius: 60px;
-  top: 10%;
-  left: 10%;
-  height: 40%;
-  width: 70%;
+  top: 5%;
+  right: 15%;
+  height: 30%;
+  width: 50%;
   padding-right: 10%;
   background-color:black;
   opacity: 85%;
