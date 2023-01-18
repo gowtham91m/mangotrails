@@ -97,8 +97,7 @@ export const MobileNavContainer = styled.div`
   justify-content: center;
   text-align:center;
   align-items: center;
-  border-radius: 60px;
-  top: 5%;
+  border-radius: 10px;
   right: 15%;
   height: 30%;
   width: 50%;
