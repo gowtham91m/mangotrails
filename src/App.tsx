@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './pages';
 import Codelab from './pages/Codelab';
-import Leasure from './pages/Leasure';
+import Photography from './pages/Photography';
+import Artroom from './pages/Artroom';
 import whitebackground from './images/whitebackground.jpeg'
 import blackbckground from './images/blackbackground.jpeg'
 import {MantineProvider} from '@mantine/core';
@@ -65,7 +66,8 @@ function App() {
           <Routes>
             <Route path='/' element={<About />} />
             <Route path='/codelab' element={<Codelab />} />
-            <Route path='/leasure' element={<Leasure />} />
+            <Route path='/Photography' element={<Photography />} />
+            <Route path='/Artroom' element={<Artroom />} />
           </Routes>
         </Router>
       </StyledApp>

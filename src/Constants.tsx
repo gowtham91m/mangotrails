@@ -29,5 +29,7 @@ export default {
             }
         ]
     },
-    Colab: { Name: "How was this website built" }
+    Colab: { Name: "How was this website built" },
+    Leisure: [{ Movies: ["title1", "title2", "title3"] }, { Series: ["title1", "title2", "title3"] }]
+
 };

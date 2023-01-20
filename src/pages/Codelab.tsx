@@ -26,7 +26,6 @@ const Imgdiv = styled.div`
         width : 400px;
       }
     }
-  }
 `;
 
 export default Codelab;

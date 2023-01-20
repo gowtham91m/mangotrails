@@ -65,7 +65,8 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     <NavTabs>
                         <ul><NavLink to={'/'}>About</NavLink></ul>
                         <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
-                        <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
+                        <ul><NavLink to={'/Photography'}>Photography</NavLink></ul>
+                        <ul><NavLink to={'/Artroom'}>Artroom</NavLink></ul>
                         <ul><Contact toggleTheme={toggleTheme} /></ul>
                     </NavTabs>
                 </NavContainer>
@@ -75,11 +76,12 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                 {isSideNavOpen && (
                     <>
                     <Backdrop onClick={() => { setSideNavOpen(!isSideNavOpen) }} />
-                    <MobileNavContainer>
+                    <MobileNavContainer >
                         <MobileNavTabs>
-                            <ul><NavLink to={'/'}>About</NavLink></ul>
-                            <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
-                            <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
+                                <ul><NavLink to={'/'} onClick={() => { setSideNavOpen(!isSideNavOpen) }}>About</NavLink></ul>
+                                <ul><NavLink to={'/codelab'} onClick={() => { setSideNavOpen(!isSideNavOpen) }}>Codelab</NavLink></ul>
+                                <ul><NavLink to={'/Photography'} onClick={() => { setSideNavOpen(!isSideNavOpen) }}>Photography</NavLink></ul>
+                                <ul><NavLink to={'/Artroom'} onClick={() => { setSideNavOpen(!isSideNavOpen) }}>Artroom</NavLink></ul>
                         </MobileNavTabs>
                     </MobileNavContainer>
                     </>
