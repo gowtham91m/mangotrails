@@ -9,7 +9,6 @@ import Photography from './pages/Photography';
 import Artroom from './pages/Artroom';
 import whitebackground from './images/whitebackground.jpeg'
 import blackbckground from './images/blackbackground.jpeg'
-import {MantineProvider} from '@mantine/core';
 
 
 export const lightTheme = {

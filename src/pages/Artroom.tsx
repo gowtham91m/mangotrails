@@ -25,10 +25,10 @@ const Artroom = () => {
 
 const HomeContainer = styled.div`
   float:left;
-  padding-left:5%;
-  padding-right:5%;
-  padding-top:5%;
-  justify-content: center;
+  padding-left:10%;
+  padding-right:10%;
+  padding-top:10%;
+  align-items: left;
   @media screen and (max-width: 767px){
   float:left;
   padding-left:10%;
