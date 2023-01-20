@@ -55,11 +55,11 @@ export const MobileNavContact = styled.div`
   @media screen and (max-width: 786px){
   position: fixed;
   display: table-cell;
-  justify-content: center;
+  justify-content: space-between;
   align-items: right;
   right: 0px;
   height: 20%;
-  width: 50px;
+  width: 40px;
   padding-right: 1%;
   z-index:997;
   }
@@ -99,8 +99,8 @@ export const MobileNavContainer = styled.div`
   align-items: center;
   border-radius: 10px;
   right: 15%;
-  height: 30%;
-  width: 50%;
+  height: 200px;
+  width: 120px;
   padding-right: 10%;
   background-color:black;
   opacity: 85%;

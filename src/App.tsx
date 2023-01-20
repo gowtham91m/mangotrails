@@ -57,8 +57,7 @@ function App() {
   }
 
   return (
-    // <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-    <MantineProvider theme={isDarkTheme ? { colorScheme: 'dark' } : { colorScheme: 'light' }} withGlobalStyles >
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <StyledApp>
         <Router>
           <GlobalStyle />
@@ -70,8 +69,7 @@ function App() {
           </Routes>
         </Router>
       </StyledApp>
-       </MantineProvider>
-    // </ThemeProvider>
+    </ThemeProvider>
   );
 }
 

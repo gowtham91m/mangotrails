@@ -2,8 +2,16 @@ import React from 'react';
 import styled from "styled-components";
 import WordCloud from '../components/Wordcloud';
 import constants from '../Constants';
-import { Timeline, Text } from '@mantine/core';
 import ProfilePic from '../images/ProfilePic.png'
+
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import Typography from '@mui/material/Typography';
+import Constants from '../Constants';
 
 
 const About = () => {
@@ -17,42 +25,50 @@ const About = () => {
         <Intro><span>`{constants.About.Intro}`</span></Intro>
         <Experience>
             <h2>Professional Experience</h2>
-            <Timeline active={10} bulletSize={24} lineWidth={2}>
-              <Timeline.Item title="2012" >
-                <Text  size="lg">{constants.About.Experience["2012"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2012"].Description}</Text>
-              </Timeline.Item>
+          
+          <Timeline
+            sx={{
+              [`& .${timelineItemClasses.root}:before`]: {
+                flex: 0,
+                padding: 0,
+              },
+            }}
+          >
 
-            <Timeline.Item title="2015" >
-              <Text size="lg">{constants.About.Experience["2015"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2015"].Description}</Text>
-            </Timeline.Item>
+            {Constants.About.Experience.map((exp) => 
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: '3px', px: 2 }}>
+                  <Typography variant="h6" component="span">
+                    {exp.year}
+                  </Typography>
+                  <Typography variant="subtitle1" >{exp.Position}</Typography>
+                  <Typography>{exp.Description}</Typography>
+                </TimelineContent>
+              </TimelineItem>
+            )}
 
-              <Timeline.Item title="2016" >
-              <Text size="lg">{constants.About.Experience["2016"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2016"].Description}</Text>
-              </Timeline.Item>
-
-              <Timeline.Item title="2017" >
-              <Text size="lg">{constants.About.Experience["2017"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2017"].Description}</Text>
-              </Timeline.Item>
-
-            <Timeline.Item title="2019" lineVariant="dashed" >
-              <Text size="lg">{constants.About.Experience["2019"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2019"].Description}</Text>
-              </Timeline.Item>
-
-            <Timeline.Item title="2023" />
-
-            </Timeline>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot />
+              </TimelineSeparator>
+              <TimelineContent sx={{ py: '3px', px: 2 }}>
+                <Typography variant="h6" component="span">
+                  {new Date().getFullYear()}
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
+            
+          </Timeline>
 
         </Experience>
       </HomeContainer>
     </>
   );
 };
-
 
 const HomeContainer = styled.div`
   display: grid;
