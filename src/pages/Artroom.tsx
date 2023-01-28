@@ -24,7 +24,6 @@ const Artroom = () => {
 
 
 const HomeContainer = styled.div`
-  float:left;
   padding-left:10%;
   padding-right:10%;
   padding-top:10%;
@@ -39,6 +38,7 @@ const HomeContainer = styled.div`
 
 const Img = styled.img`
   height : 300px;
+  float:left;
   padding: 20px;
   width: auto;
   @media screen and (max-width: 767px){

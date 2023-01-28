@@ -32,6 +32,7 @@ const StyledApp = styled.div`
 `
 
 function App() {
+
   const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
 

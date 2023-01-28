@@ -33,6 +33,7 @@ const Img = styled.img`
   height : 300px;
   padding: 20px;
   width: auto;
+  float:left;
   @media screen and (max-width: 767px){
     width:100%;
     height:auto;

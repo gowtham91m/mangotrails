@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mangotrails-dev-145013-authRole",
+      "UnauthRoleArn": "arn:aws:iam::147866640792:role/amplify-mangotrails-dev-145013-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::147866640792:role/amplify-mangotrails-dev-145013-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-mangotrails-dev-145013-deployment",
+      "UnauthRoleName": "amplify-mangotrails-dev-145013-unauthRole",
+      "StackName": "amplify-mangotrails-dev-145013",
+      "StackId": "arn:aws:cloudformation:us-west-2:147866640792:stack/amplify-mangotrails-dev-145013/22cab7c0-9aa7-11ed-83c4-063900b5322d",
+      "AmplifyAppId": "dk6vbvb0tb45x"
+    }
+  }
+}

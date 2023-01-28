@@ -36,7 +36,7 @@ const About = () => {
           >
 
             {Constants.About.Experience.map((exp) => 
-              <TimelineItem>
+              <TimelineItem key={exp.Position}>
                 <TimelineSeparator>
                   <TimelineDot />
                   <TimelineConnector />
