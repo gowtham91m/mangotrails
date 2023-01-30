@@ -19,11 +19,16 @@ const About = () => {
   return (
     <>
       <HomeContainer>
+        <AboutContainer>
         <HomeImageContainer>
           <HomeImage src={ProfilePic}></HomeImage>
         </HomeImageContainer>
         <Intro><span>`{constants.About.Intro}`</span></Intro>
-        <Experience>
+        </AboutContainer>
+
+
+
+        <TimelineContainer>
             <h2>Professional Experience</h2>
           
           <Timeline
@@ -61,43 +66,73 @@ const About = () => {
                 </Typography>
               </TimelineContent>
             </TimelineItem>
-            
           </Timeline>
+        </TimelineContainer>
 
-        </Experience>
+
+
+        <TimelineContainer>
+          <h2>Some of my leisure time projects</h2>
+
+          <Timeline
+            sx={{
+              [`& .${timelineItemClasses.root}:before`]: {
+                flex: 0,
+                padding: 0,
+              },
+            }}
+          >
+
+            {Constants.Codelab.Projects.map((item) =>
+              <TimelineItem key={item.Description}>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: '3px', px: 2 }}>
+                  <Typography variant="h6" component="span">
+                    {item.Name}
+                  </Typography>
+                  <Typography>{item.Description}</Typography>
+                </TimelineContent>
+              </TimelineItem>
+            )}
+
+          </Timeline>
+        </TimelineContainer>
+        
+
       </HomeContainer>
     </>
   );
 };
 
 const HomeContainer = styled.div`
-  display: grid;
   padding-left:5%;
   padding-right:5%;
   padding-top:5%;
   justify-content: center;
-  grid-template-areas:
-                      "HomeImageContainer Intro Intro Intro"
-                      "Experience Experience Experience Experience";
   grid-gap: 2rem;
   @media screen and (max-width: 767px){
-      display: grid;
-  padding-left:5%;
-  padding-right:5%;
-  padding-top:5%;
-  grid-template-areas:
-                      "HomeImageContainer"
-                      "Intro"
-                      "Experience";
-  grid-gap: 2rem;
+      padding-left:5%;
+      padding-right:5%;
+      padding-top:5%;
+      grid-gap: 2rem;
   }
 `;
 
+const AboutContainer = styled.div`
+  display:flex;
+  @media screen and (max-width: 767px){
+    display:block;
+  }
+`
+
 const HomeImageContainer = styled.div`
 display:flex;
+padding-top: 5%;
 justify-content: center;
 text-align: center;
-  grid-area: HomeImageContainer; 
 `;
 
 const HomeImage = styled.img`
@@ -112,25 +147,26 @@ padding-left:5%;
 padding-right:5%;
 padding-bottom: 30px;
 font-size:18px;
+line-height:25px;
 vertical-align: center;
-  grid-area: Intro;
   @media screen and (max-width: 767px){
-    padding-top:0%;
+    padding-top:10%;
     padding-bottom: 20px;
     height: 100%;
   }
 `;
 
-const Experience = styled.div`
+const TimelineContainer = styled.div`
 display: block;
 text-align:left;
 padding-bottom: 10px;
 padding-left: 30%;
-grid-area: Experience;
 @media screen and (max-width: 767px){
   padding-left: 0;
   padding-bottom: 15%;;
 }
 `;
+
+
 export default About;
 

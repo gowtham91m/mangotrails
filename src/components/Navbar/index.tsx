@@ -54,7 +54,6 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
     }
 
     return (
-        <>
             <Nav >
                 
                 <NavLogo>
@@ -87,7 +86,6 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     </>
                 )}
             </Nav>
-        </>
     );
 };
 

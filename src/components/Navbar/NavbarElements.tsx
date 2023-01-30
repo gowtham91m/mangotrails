@@ -61,7 +61,6 @@ export const MobileNavContact = styled.div`
   height: 20%;
   width: 40px;
   padding-right: 1%;
-  z-index:997;
   }
 `
 
@@ -73,7 +72,6 @@ export const NavTabs = styled.div`
   @media screen and (max-width: 768px) {
     display:none;
   }
-    z-index:998
 `;
 
 
