@@ -91,7 +91,7 @@ const About = () => {
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '3px', px: 2 }}>
                   <Typography variant="h6" component="span">
-                    {item.Name}
+                    <a href="/HowWasThisWebsiteBuilt">{item.Name}</a>
                   </Typography>
                   <Typography>{item.Description}</Typography>
                 </TimelineContent>
@@ -111,18 +111,21 @@ const HomeContainer = styled.div`
   padding-left:5%;
   padding-right:5%;
   padding-top:5%;
+  padding-bottom: 5%;
   justify-content: center;
   grid-gap: 2rem;
   @media screen and (max-width: 767px){
       padding-left:5%;
       padding-right:5%;
       padding-top:5%;
+      padding-bottom: 5%;
       grid-gap: 2rem;
   }
 `;
 
 const AboutContainer = styled.div`
   display:flex;
+  padding-bottom: 10%;
   @media screen and (max-width: 767px){
     display:block;
   }
@@ -142,12 +145,12 @@ display:flex;
 `
 
 const Intro = styled.div`
-padding-top:10%;
+padding-top:12%;
 padding-left:5%;
 padding-right:5%;
-padding-bottom: 30px;
+padding-bottom: 5%;
 font-size:18px;
-line-height:25px;
+line-height:28px;
 vertical-align: center;
   @media screen and (max-width: 767px){
     padding-top:10%;
@@ -159,8 +162,9 @@ vertical-align: center;
 const TimelineContainer = styled.div`
 display: block;
 text-align:left;
-padding-bottom: 10px;
-padding-left: 30%;
+padding-top: 5%;
+padding-bottom: 5px;
+padding-left: 15%;
 @media screen and (max-width: 767px){
   padding-left: 0;
   padding-bottom: 15%;;

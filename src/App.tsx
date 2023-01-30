@@ -7,6 +7,7 @@ import About from './pages';
 import Codelab from './pages/Codelab';
 import Photography from './pages/Photography';
 import Artroom from './pages/Artroom';
+import HowWasThisWebsiteBuilt from './pages/HowWasThisWebsiteBuilt';
 import whitebackground from './images/whitebackground.jpeg'
 import blackbckground from './images/blackbackground.jpeg'
 
@@ -68,6 +69,7 @@ function App() {
             <Route path='/codelab' element={<Codelab />} />
             <Route path='/Photography' element={<Photography />} />
             <Route path='/Artroom' element={<Artroom />} />
+            <Route path='/HowWasThisWebsiteBuilt' element={<HowWasThisWebsiteBuilt/>}/>
           </Routes>
         </Router>
       </StyledApp>
