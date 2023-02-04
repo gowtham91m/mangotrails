@@ -3,9 +3,15 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
-  height: 50px;
+  margin: 0 auto;
+  height:50px;
+  max-width:1300px;
+  width:100%;
   display: flex;
   justify-content: space-between;
+  position:fixed;
+  left: 0;
+  right: 0;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 10px;
@@ -19,7 +25,7 @@ justify-content: space-between;
 
 export const NavLogo = styled.div`
 justify-self: flex-start;
-    height:150px;
+    height:50px;
 `
 
 export const NavName = styled.div`
@@ -31,7 +37,7 @@ export const NavName = styled.div`
 
 export const NavLink = styled(Link)`
     text-decoration: None;
-    color: ${(props) => props.theme.text};
+    /* color: ${(props) => props.theme.text}; */
     &:hover{cursor:default;
         text-decoration:underline;
         text-underline-offset:10px}
@@ -50,10 +56,28 @@ export const NavContact = styled.div`
   }
 `
 
+export const MobileNavContainer = styled.div`
+  display:none;
+@media screen and (max-width: 767px){
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  text-align:center;
+  align-items: center;
+  border-radius: 10px;
+  right:15%;
+  height: 30%;
+  padding-right: 10%;
+  background-color:black;
+  opacity: 85%;
+  z-index:997;
+}
+`
+
 export const MobileNavContact = styled.div`
   display: none;
   @media screen and (max-width: 786px){
-  position: fixed;
+  position: absolute;
   display: table-cell;
   justify-content: center;
   align-items: right;
@@ -86,26 +110,6 @@ display: none;
     padding-left:10px;
     padding-top: 10px;
   }
-`
-
-
-export const MobileNavContainer = styled.div`
-  display:none;
-@media screen and (max-width: 767px){
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  text-align:center;
-  align-items: center;
-  border-radius: 10px;
-  right: 15%;
-  height: 30%;
-  width: 50%;
-  padding-right: 10%;
-  background-color:black;
-  opacity: 85%;
-  z-index:997;
-}
 `
 
 export const Backdrop = styled.div`

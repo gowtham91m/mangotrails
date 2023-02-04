@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import WordCloud from '../components/Wordcloud';
 import constants from '../Constants';
-import { Timeline, Text } from '@mantine/core';
 import ProfilePic from '../images/ProfilePic.png'
 
 
@@ -16,37 +15,6 @@ const About = () => {
         </HomeImageContainer>
         <Intro><span>`{constants.About.Intro}`</span></Intro>
         <Experience>
-            <h2>Professional Experience</h2>
-            <Timeline active={10} bulletSize={24} lineWidth={2}>
-              <Timeline.Item title="2012" >
-                <Text  size="lg">{constants.About.Experience["2012"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2012"].Description}</Text>
-              </Timeline.Item>
-
-            <Timeline.Item title="2015" >
-              <Text size="lg">{constants.About.Experience["2015"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2015"].Description}</Text>
-            </Timeline.Item>
-
-              <Timeline.Item title="2016" >
-              <Text size="lg">{constants.About.Experience["2016"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2016"].Description}</Text>
-              </Timeline.Item>
-
-              <Timeline.Item title="2017" >
-              <Text size="lg">{constants.About.Experience["2017"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2017"].Description}</Text>
-              </Timeline.Item>
-
-            <Timeline.Item title="2019" lineVariant="dashed" >
-              <Text size="lg">{constants.About.Experience["2019"].Position}</Text>
-              <Text size="md" mt={4}>{constants.About.Experience["2019"].Description}</Text>
-              </Timeline.Item>
-
-            <Timeline.Item title="2023" />
-
-            </Timeline>
-
         </Experience>
       </HomeContainer>
     </>
@@ -56,9 +24,8 @@ const About = () => {
 
 const HomeContainer = styled.div`
   display: grid;
-  padding-left:5%;
-  padding-right:5%;
-  padding-top:5%;
+  padding-left:10%;
+  padding-top:10%;
   justify-content: center;
   grid-template-areas:
                       "HomeImageContainer Intro Intro Intro"
@@ -68,7 +35,7 @@ const HomeContainer = styled.div`
       display: grid;
   padding-left:5%;
   padding-right:5%;
-  padding-top:5%;
+  padding-top:20%;
   grid-template-areas:
                       "HomeImageContainer"
                       "Intro"
@@ -117,4 +84,5 @@ grid-area: Experience;
 }
 `;
 export default About;
+
 

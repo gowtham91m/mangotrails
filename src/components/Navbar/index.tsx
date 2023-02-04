@@ -14,7 +14,7 @@ import {
 } from './NavbarElements';
 import ToggleSwitch from '../ToggleSwitch'
 import { AiOutlineLinkedin, AiFillGithub } from 'react-icons/ai'
-import Github from '../../images/Github.svg'
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { FcMenu } from 'react-icons/fc';
 
 
@@ -54,9 +54,7 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
     }
 
     return (
-        <>
             <Nav >
-                
                 <NavLogo>
                     <NavName>Gowtham</NavName>
                 </NavLogo>
@@ -85,7 +83,6 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     </>
                 )}
             </Nav>
-        </>
     );
 };
 
