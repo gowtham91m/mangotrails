@@ -44,7 +44,7 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
             <MobileNavContact>
                 <FcMenu size={30} onClick={() => { setSideNavOpen(!isSideNavOpen) }} />
                 <a href='https://www.linkedin.com/in/gowtham-mallikarjuna/' target="_blank">
-                    <AiOutlineLinkedin size={25}/></a>
+                    <AiOutlineLinkedin size={25} /></a>
                 <a href='https://github.com/gowtham91m' target="_blank">
                     <AiFillGithub size={25} /></a>
                 <ToggleSwitch toggleTheme={toggleTheme} />
@@ -59,8 +59,8 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     <NavName>Gowtham</NavName>
                 </NavLogo>
 
-                <NavContainer>
-                    <NavTabs>
+                <NavContainer >
+                    <NavTabs >
                         <ul><NavLink to={'/'}>About</NavLink></ul>
                         <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
                         <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
@@ -73,11 +73,11 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                 {isSideNavOpen && (
                     <>
                     <Backdrop onClick={() => { setSideNavOpen(!isSideNavOpen) }} />
-                    <MobileNavContainer>
+                    <MobileNavContainer onClick={() => { setSideNavOpen(!isSideNavOpen) }} >
                         <MobileNavTabs>
-                            <ul><NavLink to={'/'}>About</NavLink></ul>
-                            <ul><NavLink to={'/codelab'}>Codelab</NavLink></ul>
-                            <ul><NavLink to={'/leasure'}>Leasure</NavLink></ul>
+                            <ul><NavLink to={'/'} onClick={() => { setSideNavOpen(!isSideNavOpen) }}>About</NavLink></ul>
+                            <ul><NavLink to={'/codelab'} onClick={() => { setSideNavOpen(!isSideNavOpen) }}>Codelab</NavLink></ul>
+                            <ul><NavLink to={'/leasure'} onClick={() => { setSideNavOpen(!isSideNavOpen) }}>Leasure</NavLink></ul>
                         </MobileNavTabs>
                     </MobileNavContainer>
                     </>

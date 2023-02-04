@@ -24,7 +24,6 @@ const About = () => {
 
 const HomeContainer = styled.div`
   display: grid;
-  padding-left:10%;
   padding-top:10%;
   justify-content: center;
   grid-template-areas:
@@ -59,8 +58,8 @@ display:flex;
 
 const Intro = styled.div`
 padding-top:10%;
-padding-left:5%;
-padding-right:5%;
+padding-left:10%;
+padding-right:10%;
 padding-bottom: 30px;
 font-size:18px;
 vertical-align: center;

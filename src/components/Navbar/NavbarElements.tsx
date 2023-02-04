@@ -3,15 +3,10 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
-  margin: 0 auto;
   height:50px;
-  max-width:1300px;
-  width:100%;
   display: flex;
   justify-content: space-between;
   position:fixed;
-  left: 0;
-  right: 0;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 10px;
@@ -56,6 +51,21 @@ export const NavContact = styled.div`
   }
 `
 
+export const Backdrop = styled.div`
+  display:none;
+@media screen and (max-width: 767px){
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color:black;
+  opacity:0%;
+  z-index:996;
+}
+`
+
 export const MobileNavContainer = styled.div`
   display:none;
 @media screen and (max-width: 767px){
@@ -68,8 +78,11 @@ export const MobileNavContainer = styled.div`
   right:15%;
   height: 30%;
   padding-right: 10%;
+  width:40%;
   background-color:black;
   opacity: 85%;
+  margin-right: 0px;
+  line-height:40px;
   z-index:997;
 }
 `
@@ -77,7 +90,6 @@ export const MobileNavContainer = styled.div`
 export const MobileNavContact = styled.div`
   display: none;
   @media screen and (max-width: 786px){
-  position: absolute;
   display: table-cell;
   justify-content: center;
   align-items: right;
@@ -112,20 +124,7 @@ display: none;
   }
 `
 
-export const Backdrop = styled.div`
-  display:none;
-@media screen and (max-width: 767px){
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  background-color:black;
-  opacity:0%;
-  z-index:996;
-}
-`
+
 
 export const MobileNavMenu = styled.div`
 display:none;
