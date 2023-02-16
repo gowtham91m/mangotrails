@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import About from './pages';
 import Codelab from './pages/Codelab';
 import Leasure from './pages/Leasure';
+import Favorites from './pages/Favorites';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -59,6 +60,7 @@ function App() {
             <Route path='/' element={<About />} />
             <Route path='/codelab' element={<Codelab />} />
             <Route path='/leasure' element={<Leasure />} />
+          <Route path='/favorites' element={<Favorites />} />
           </Routes>
         </Router>
      </ThemeProvider>

@@ -16,18 +16,18 @@ const About = () => {
 
   return (
     <>
-      <HomeMainContainer>
+      <CardContainer>
         <HomeContainer>
           <HomeImageContainer>
             <HomeImage src={ProfilePic}></HomeImage>
           </HomeImageContainer>
           <Intro><span>`{constants.About.Intro}`</span></Intro>
         </HomeContainer>
-      </HomeMainContainer>
+      </CardContainer>
 
 
-      <ExperienceMainContainer>
-      <ExperienceContainer>
+      <CardContainer>
+        <Card>
         <h2>Experience</h2>
         <Timeline
           sx={{
@@ -68,21 +68,67 @@ const About = () => {
             </TimelineContent>
           </TimelineItem>
         </Timeline>
-      </ExperienceContainer>
-      </ExperienceMainContainer>
+        </Card>
+      </CardContainer>
+
+      <CardContainer>
+        <Card>
+          <h2>Projects</h2>
+          <Timeline
+            sx={{
+              [`& .${timelineItemClasses.root}:before`]: {
+                flex: 0,
+                padding: 0,
+              },
+            }}
+          >
+            {Constants.Colab.Projects.map((p) =>
+              <TimelineItem key={p.Name}>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+
+                <TimelineContent>
+                  <Typography variant="h6">
+                    <a href={ p.href}>{p.Name}</a>
+                  </Typography>
+                  <Typography variant="h6">
+                    {p.Description}
+                  </Typography>
+                </TimelineContent>
+              </TimelineItem>)}
+
+          </Timeline>
+        </Card>
+      </CardContainer>
     </>
   );
 };
 
-const HomeMainContainer = styled.div`
+const CardContainer = styled.div`
   display:block;
   padding-top:5%;
+  padding-bottom:10%;
   padding-right: 5%;
     @media screen and (max-width: 767px){
       padding-top:0%;
       padding-right:3%;
   }
 `
+
+const Card = styled.div`
+display: block;
+text-align:left;
+padding-left:5%;
+box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
+@media screen and (max-width: 767px){
+  padding: 5%;
+  box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2);
+}
+`;
+
+
 const HomeContainer = styled.div`
   display: grid;
   padding-top:10%;
@@ -135,27 +181,6 @@ vertical-align: center;
 `;
 
 
-const ExperienceMainContainer = styled.div`
-  display:block;
-  padding-top:5%;
-  padding-bottom:10%;
-  padding-right: 5%;
-    @media screen and (max-width: 767px){
-      padding-top:0%;
-      padding-right:3%;
-  }
-`
-
-const ExperienceContainer = styled.div`
-display: block;
-text-align:left;
-padding-left:5%;
-box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
-@media screen and (max-width: 767px){
-  padding: 5%;
-  box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2);
-}
-`;
 
 export default About;
 

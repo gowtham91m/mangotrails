@@ -29,5 +29,11 @@ export default {
             }
         ]
     },
-    Colab: { Name: "How was this website built" }
+    Colab: {
+        Projects: [
+            { Name: "How was this website built", Description: "description 1", href:"./Favorites"},
+            { Name: "Favorites", Description: "description 2", href: "./Favorites" },
+            { Name: "Artlab", Description: "description 3", href: "./Favorites" }
+            ]
+    }
 };
