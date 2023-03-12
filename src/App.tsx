@@ -11,6 +11,9 @@ import Favorites from './pages/Favorites';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
+import client from './apollo';
+import { ApolloProvider } from '@apollo/client';
+
 
 
 
@@ -52,6 +55,7 @@ function App() {
 
   return (
     <ThemeProvider theme={isDarkTheme ?  lightTheme: darkTheme}>
+      <ApolloProvider client={client}>
       <CssBaseline />
         <Router>
           <GlobalStyle />
@@ -63,6 +67,7 @@ function App() {
           <Route path='/favorites' element={<Favorites />} />
           </Routes>
         </Router>
+      </ApolloProvider>
      </ThemeProvider>
   );
 }
