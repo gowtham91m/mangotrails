@@ -35,6 +35,7 @@ export default () => {
                             <ul>Description: {item.description}</ul>
                             <ul>Rating: {item.rating}</ul>
                             <ul>Author: {item.author}</ul>
+                            <ul>genre: {item.genre}</ul>
                         </Card>
                 </li>
             </>

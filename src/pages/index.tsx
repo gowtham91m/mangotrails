@@ -73,7 +73,6 @@ const About = () => {
 
       <CardContainer>
         <Card>
-          <h2>Projects</h2>
           <Timeline
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {
@@ -108,9 +107,7 @@ const About = () => {
 
 const CardContainer = styled.div`
   display:block;
-  padding-top:5%;
-  padding-bottom:10%;
-  padding-right: 5%;
+  padding:5%;
     @media screen and (max-width: 767px){
       padding-top:0%;
       padding-right:3%;
@@ -120,7 +117,8 @@ const CardContainer = styled.div`
 const Card = styled.div`
 display: block;
 text-align:left;
-padding-left:5%;
+padding:5%;
+border: 1px solid #ccc;
 box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
 @media screen and (max-width: 767px){
   padding: 5%;
@@ -131,12 +129,15 @@ box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
 
 const HomeContainer = styled.div`
   display: grid;
-  padding-top:10%;
+  margin-top: 5%;
+  padding-top:5%;
   justify-content: center;
   grid-template-areas:
                       "HomeImageContainer Intro Intro Intro"
                       "Experience Experience Experience Experience";
   grid-gap: 2rem;
+  border: 2px solid #ccc;
+  padding-left: 5%;
   box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
   @media screen and (max-width: 767px){
       display: grid;

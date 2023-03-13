@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import GlobalStyle from './globalStyles';
-import styled from 'styled-components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './pages';
@@ -15,51 +14,31 @@ import client from './apollo';
 import { ApolloProvider } from '@apollo/client';
 
 
-
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
-
-const lightTheme = createTheme({
-  palette: {
-    mode: 'light',
-  },
-});
-
 function App() {
-  const [theme, setTheme] = useState("dark");
-  const isDarkTheme = theme === "dark";
 
+  const [darkMode, setDarkMode] = useState(false);
 
-  
-  // const setBackground = () => {
-  //   if (isDarkTheme) {
-  //     document.body.style.backgroundImage = `url(${whitebackground})`;
-  //     document.body.style.backgroundSize = "cover";
-  //   }
-  //   else {
-  //     document.body.style.backgroundImage = `url(${blackbckground})`;
-  //     document.body.style.backgroundSize = "cover";
-  //   }
-  // }
+  const theme = createTheme({
+    palette: {
+      mode: darkMode ? 'dark' : 'light',
+      primary: {
+        main: '#2196f3',
+      },
+    },
+  });
 
-  
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
-  const toggleTheme = () => {
-    setTheme(isDarkTheme ? "light" : "dark");
-    // setBackground();
-  }
 
   return (
-    <ThemeProvider theme={isDarkTheme ?  lightTheme: darkTheme}>
+    <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
       <CssBaseline />
         <Router>
           <GlobalStyle />
-          <Navbar toggleTheme={toggleTheme} />
+          <Navbar toggleTheme={toggleDarkMode} />
           <Routes>
             <Route path='/' element={<About />} />
             <Route path='/codelab' element={<Codelab />} />
