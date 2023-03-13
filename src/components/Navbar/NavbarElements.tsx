@@ -13,7 +13,7 @@ export const Nav = styled.nav<{ backgroundColor: string }>`
   padding-top: 10px;
   z-index: 999;
   @media screen and (max-width: 786px){
-    padding-left: 10%;
+    padding-left: 5%;
   }
 `;
 
@@ -29,10 +29,9 @@ export const NavLink = styled(Link)`
 `
 
 export const NavContact = styled.div`
-  width: 100px;
+  width: 120px;
   display: flex;
-  padding-right: 10px;
-  justify-content: right;
+  justify-content: space-between;
 
 `
 

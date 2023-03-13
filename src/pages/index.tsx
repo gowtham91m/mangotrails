@@ -17,9 +17,7 @@ const About = () => {
     <>
       <CardContainer>
         <HomeContainer>
-          <HomeImageContainer>
             <HomeImage src={ProfilePic}></HomeImage>
-          </HomeImageContainer>
           <Intro><span>`{constants.About.Intro}`</span></Intro>
         </HomeContainer>
       </CardContainer>
@@ -86,7 +84,7 @@ const About = () => {
 
                 <TimelineContent>
                   <Typography variant="h6">
-                    <a href={ p.href}>{p.Name}</a>
+                    <Anchor href={p.href}>{p.Name}</Anchor>
                   </Typography>
                   <Typography variant="h6">
                     {p.Description}
@@ -123,6 +121,12 @@ box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
 `;
 
 
+export const Anchor = styled.a`
+  color: inherit;
+  text-decoration: none;
+  font-weight:bold`
+
+
 const HomeContainer = styled.div`
   display: grid;
   margin-top: 5%;
@@ -149,17 +153,12 @@ const HomeContainer = styled.div`
   }
 `;
 
-const HomeImageContainer = styled.div`
-display:flex;
-justify-content: center;
-text-align: center;
-  grid-area: HomeImageContainer; 
-`;
 
 const HomeImage = styled.img`
 display:flex;
   height:300px;
   width:300px;
+  grid-area: HomeImageContainer; 
 `
 
 const Intro = styled.div`
