@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import About from './pages';
 import Codelab from './pages/Codelab';
 import Leasure from './pages/Leasure';
-import Favorites from './pages/Favorites';
+import PersonalInterests from './pages/PersonalInterests';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -41,9 +41,7 @@ function App() {
           <Navbar toggleTheme={toggleDarkMode} />
           <Routes>
             <Route path='/' element={<About />} />
-            <Route path='/codelab' element={<Codelab />} />
-            <Route path='/leasure' element={<Leasure />} />
-          <Route path='/favorites' element={<Favorites />} />
+            <Route path='/PersonalInterests' element={<PersonalInterests />} />
           </Routes>
         </Router>
       </ApolloProvider>

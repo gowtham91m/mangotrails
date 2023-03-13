@@ -17,10 +17,6 @@ export const Nav = styled.nav<{ backgroundColor: string }>`
   }
 `;
 
-export const NavLogo = styled.div`
-justify-self: flex-start;
-    height:50px;
-`
 
 export const NavLink = styled(Link)`
   font-size:30px;
@@ -37,9 +33,7 @@ export const NavContact = styled.div`
   display: flex;
   padding-right: 10px;
   justify-content: right;
-  @media screen and (max-width: 786px){
-    display:none;
-  }
+
 `
 
 export const MobileNavContact = styled.div`

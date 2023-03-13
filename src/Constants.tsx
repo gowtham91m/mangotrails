@@ -31,9 +31,13 @@ export default {
     },
     Colab: {
         Projects: [
-            { Name: "How was this website built", Description: "description 1", href:"./Favorites"},
-            { Name: "Favorites", Description: "description 2", href: "./Favorites" },
-            { Name: "Artlab", Description: "description 3", href: "./Favorites" }
-            ]
+            {
+                Name: "How was this website built",
+                Description: "A brief system design and tech stack details of this webapp development",
+                href: "./PersonalInterests"
+            },
+            { Name: "Personal Interests", Description: "Leasure time activities", href: "./PersonalInterests" },
+            { Name: "Artlab", Description: "Pencil sketches and photography", href: "./PersonalInterests" }
+        ]
     }
 };

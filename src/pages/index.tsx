@@ -7,7 +7,6 @@ import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Constants from '../Constants';
 import { Typography } from '@mui/material';
@@ -46,10 +45,7 @@ const About = () => {
 
               <TimelineContent>
                 <Typography variant="h6">
-                  {exp.year}
-                </Typography>
-                <Typography variant="h6">
-                  {exp.Position}
+                  {exp.year } - {exp.Position}
                 </Typography>
                 <Typography>
                   {exp.Description}

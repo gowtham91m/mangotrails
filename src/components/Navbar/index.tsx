@@ -1,9 +1,7 @@
 import React from 'react';
 import {
     Nav,
-    NavLogo,
     NavContact,
-    MobileNavContact,
     NavLink,
     Anchor
 } from './NavbarElements';
@@ -22,9 +20,7 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
 
     return (
         <Nav backgroundColor={backgroundColor}>
-            <NavLogo>
-                <ul><NavLink to={'/'} >Gowtham</NavLink></ul>
-            </NavLogo>
+                <NavLink to={'/'} >Gowtham</NavLink>
 
             <NavContact>
                 <Anchor href='https://www.linkedin.com/in/gowtham-mallikarjuna/' target="_blank">
@@ -33,14 +29,6 @@ const Navbar: React.FC<Props> = ({ toggleTheme }) => {
                     <AiFillGithub size={25} /></Anchor>
                 <ToggleSwitch toggleTheme={toggleTheme} />
             </NavContact>
-
-            <MobileNavContact>
-                <Anchor href='https://www.linkedin.com/in/gowtham-mallikarjuna/' target="_blank">
-                    <AiOutlineLinkedin size={25} /></Anchor>
-                <Anchor href='https://github.com/gowtham91m' target="_blank">
-                    <AiFillGithub size={25} /></Anchor>
-                <ToggleSwitch toggleTheme={toggleTheme} />
-            </MobileNavContact>
         </Nav>
     );
 };
