@@ -99,12 +99,41 @@ const About = () => {
   );
 };
 
+
+
+const HomeContainer = styled.div`
+  display: grid;
+  margin-top: 5%;
+  padding-top:5%;
+  justify-content: center;
+  grid-template-areas:
+                      "HomeImageContainer Intro Intro Intro"
+                      "Experience Experience Experience Experience";
+  grid-gap: 2rem;
+  border: 2px solid #ccc;
+  padding-left: 5%;
+  box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
+  @media screen and (max-width: 767px){
+  display: grid;
+  padding-left:5%;
+  padding-right:3%;
+  padding-top:20%;
+  grid-template-areas:
+                      "HomeImageContainer"
+                      "Intro"
+                      "Experience";
+  grid-gap: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2);
+  }
+`;
+
 const CardContainer = styled.div`
   display:block;
   padding:5%;
     @media screen and (max-width: 767px){
-      padding-top:0%;
+      padding-top:10%;
       padding-right:3%;
+      padding-left:3%
   }
 `
 
@@ -127,31 +156,6 @@ export const Anchor = styled.a`
   font-weight:bold`
 
 
-const HomeContainer = styled.div`
-  display: grid;
-  margin-top: 5%;
-  padding-top:5%;
-  justify-content: center;
-  grid-template-areas:
-                      "HomeImageContainer Intro Intro Intro"
-                      "Experience Experience Experience Experience";
-  grid-gap: 2rem;
-  border: 2px solid #ccc;
-  padding-left: 5%;
-  box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
-  @media screen and (max-width: 767px){
-      display: grid;
-  padding-left:5%;
-  padding-right:3%;
-  padding-top:20%;
-  grid-template-areas:
-                      "HomeImageContainer"
-                      "Intro"
-                      "Experience";
-  grid-gap: 2rem;
-  box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2);
-  }
-`;
 
 
 const HomeImage = styled.img`

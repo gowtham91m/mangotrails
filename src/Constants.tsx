@@ -32,12 +32,12 @@ export default {
     Colab: {
         Projects: [
             {
-                Name: "How was this website built",
+                Name: "How is this website built",
                 Description: "A brief system design and tech stack details of this webapp development",
-                href: "./PersonalInterests"
+                href: "./AppDevelopment"
             },
             { Name: "Personal Interests", Description: "Leasure time activities", href: "./PersonalInterests" },
-            { Name: "Artlab", Description: "Pencil sketches and photography", href: "./PersonalInterests" }
+            { Name: "Artlab", Description: "Pencil sketches and photography", href: "./Artlab" }
         ]
     }
 };

@@ -42,12 +42,9 @@ export default () => {
     if (loading) return <p>Loading...</p>;
     if (error) console.log(error);
 
-    console.log(data.listFavorites.items);
-
-
     return (<HomeContainer>
-        {data.listFavorites.items.map((item: any) =>
-            <>
+        {data.listFavorites.items.map((item: any, index: number) =>
+            <React.Fragment key={index}>
                 <Card>
                     <Image src={item.image} />
                     <DetailsDiv>
@@ -58,7 +55,7 @@ export default () => {
                         <ul>genre: {item.genre}</ul>
                     </DetailsDiv>
                 </Card>
-            </>
+            </React.Fragment>
         )
         }
     </HomeContainer>)

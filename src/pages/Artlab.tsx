@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import UnderConstruction from '../images/UnderConstruction.png'
 
-const Leasure = () => {
+const Artlab = () => {
     return (
         <div>
             <Imgdiv>
@@ -26,8 +26,7 @@ const Imgdiv = styled.div`
         width : 400px;
       }
     }
-  }
 `;
 
-export default Leasure;
+export default Artlab;
 

@@ -35,20 +35,6 @@ export const NavContact = styled.div`
 
 `
 
-export const MobileNavContact = styled.div`
-  display: none;
-  @media screen and (max-width: 786px){
-  display: table-cell;
-  justify-content: center;
-  align-items: right;
-  right: 0px;
-  height: 20%;
-  width: 50px;
-  padding-right: 1%;
-  z-index:997;
-  }
-`
-
 export const Anchor = styled.a`
 color: inherit;
   text-decoration: none;`

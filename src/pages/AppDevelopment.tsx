@@ -2,7 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import UnderConstruction from '../images/UnderConstruction.png'
 
-const Codelab = () => {
+const AppDevelopment = () => {
+  console.log('test')
     return (
         <div>
             <Imgdiv>
@@ -26,8 +27,7 @@ const Imgdiv = styled.div`
         width : 400px;
       }
     }
-  }
 `;
 
-export default Codelab;
+export default AppDevelopment;
 

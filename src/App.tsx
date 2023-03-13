@@ -3,8 +3,6 @@ import GlobalStyle from './globalStyles';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './pages';
-import Codelab from './pages/Codelab';
-import Leasure from './pages/Leasure';
 import PersonalInterests from './pages/PersonalInterests';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -12,24 +10,25 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import client from './apollo';
 import { ApolloProvider } from '@apollo/client';
+import AppDevelopment from './pages/AppDevelopment';
+import Artlab from './pages/Artlab';
 
 
 function App() {
 
-  const [darkMode, setDarkMode] = useState(localStorage.getItem('themeMode') || false);
+  const localMode = localStorage.getItem('themeMode') == 'true'? true : false;
+  const [darkMode, setDarkMode] = useState(localMode || false);
 
   const theme = createTheme({
     palette: {
       mode: darkMode ? 'dark' : 'light',
-      primary: {
-        main: '#2196f3',
-      },
     },
   });
 
   const toggleDarkMode = () => {
-    localStorage.setItem('themeMode', darkMode.toString());
-    setDarkMode(!darkMode);
+    const newMode = !darkMode
+    localStorage.setItem('themeMode', newMode.toString());
+    setDarkMode(newMode);
   };
 
 
@@ -43,6 +42,8 @@ function App() {
           <Routes>
             <Route path='/' element={<About />} />
             <Route path='/PersonalInterests' element={<PersonalInterests />} />
+            <Route path='/AppDevelopment' element={<AppDevelopment />} />
+            <Route path='/Artlab' element={<Artlab />} />
           </Routes>
         </Router>
       </ApolloProvider>
