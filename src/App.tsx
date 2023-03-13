@@ -16,7 +16,7 @@ import { ApolloProvider } from '@apollo/client';
 
 function App() {
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(localStorage.getItem('themeMode') || false);
 
   const theme = createTheme({
     palette: {
@@ -28,6 +28,7 @@ function App() {
   });
 
   const toggleDarkMode = () => {
+    localStorage.setItem('themeMode', darkMode.toString());
     setDarkMode(!darkMode);
   };
 

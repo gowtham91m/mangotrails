@@ -42,7 +42,7 @@ const About = () => {
               </TimelineSeparator>
 
               <TimelineContent>
-                <Typography variant="h6">
+                <Typography variant="h6" fontWeight={'bold'}>
                   {exp.year } - {exp.Position}
                 </Typography>
                 <Typography>
@@ -56,7 +56,7 @@ const About = () => {
               <TimelineDot />
             </TimelineSeparator>
             <TimelineContent>
-              <Typography variant="h6" component="span">
+                <Typography variant="h6" fontWeight={'bold'}>
                 {new Date().getFullYear()}
               </Typography>
             </TimelineContent>
