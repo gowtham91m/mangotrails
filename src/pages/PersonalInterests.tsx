@@ -58,8 +58,8 @@ export default () => {
                 <ul>Name: {item.title}</ul>
                 <ul>Description: {item.description}</ul>
                 <ul>Rating: {item.rating}</ul>
-                <ul>Author: {item.author}</ul>
-                <ul>genre: {item.genre}</ul>
+                {item.author != null && <ul>Author: {item.author}</ul>}
+                {item.genre != null && <ul>Genre: {item.genre}</ul>}
               </DetailsDiv>
             </Card>
           )}
