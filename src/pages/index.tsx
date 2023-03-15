@@ -24,7 +24,7 @@ const About = () => {
 
       <CardContainer>
         <Card>
-        <h2>Experience</h2>
+        <h3>Experience</h3>
         <Timeline
           sx={{
             [`& .${timelineItemClasses.root}:before`]: {
@@ -42,7 +42,7 @@ const About = () => {
 
               <TimelineContent>
                 <ExpHeading>
-                  <ExpTitle>{exp.Position} <YearSpan>({exp.year})</YearSpan></ExpTitle>
+                  <TimelineTitle>{exp.Position} <YearSpan>({exp.year})</YearSpan></TimelineTitle>
                 </ExpHeading>
 
                 <Typography>
@@ -56,6 +56,7 @@ const About = () => {
 
       <CardContainer>
         <Card>
+          <h3>Leisure time activities</h3>
           <Timeline
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {
@@ -72,10 +73,10 @@ const About = () => {
                 </TimelineSeparator>
 
                 <TimelineContent>
-                  <Typography variant="h6">
-                    <Anchor href={p.href}>{p.Name}</Anchor>
-                  </Typography>
-                  <Typography variant="h6">
+                  <ExpHeading>
+                    <TimelineTitle><Anchor href={p.href}>{p.Name}</Anchor></TimelineTitle>
+                  </ExpHeading>
+                  <Typography>
                     {p.Description}
                   </Typography>
                 </TimelineContent>
@@ -87,7 +88,7 @@ const About = () => {
 
       <CardContainer>
         <Card style={{height:'400px'}}>
-        <h2>Testimonials</h2>
+        <h3>Testimonials</h3>
         </Card>
       </CardContainer>
     </>
@@ -105,7 +106,7 @@ const YearSpan = styled.span`
 font-weight:normal`
 
 
-const ExpTitle = styled.h4`
+const TimelineTitle = styled.h4`
 font-weight:'bold'`
 
 const HomeContainer = styled.div`
