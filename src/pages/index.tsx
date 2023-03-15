@@ -22,7 +22,6 @@ const About = () => {
         </HomeContainer>
       </CardContainer>
 
-
       <CardContainer>
         <Card>
         <h2>Experience</h2>
@@ -42,25 +41,15 @@ const About = () => {
               </TimelineSeparator>
 
               <TimelineContent>
-                <Typography variant="h6" fontWeight={'bold'}>
-                  {exp.year } - {exp.Position}
-                </Typography>
+                <ExpHeading>
+                  <ExpTitle>{exp.Position} <YearSpan>({exp.year})</YearSpan></ExpTitle>
+                </ExpHeading>
+
                 <Typography>
                   {exp.Description}
                 </Typography>
               </TimelineContent>
-
             </TimelineItem>)}
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineDot />
-            </TimelineSeparator>
-            <TimelineContent>
-                <Typography variant="h6" fontWeight={'bold'}>
-                {new Date().getFullYear()}
-              </Typography>
-            </TimelineContent>
-          </TimelineItem>
         </Timeline>
         </Card>
       </CardContainer>
@@ -95,11 +84,29 @@ const About = () => {
           </Timeline>
         </Card>
       </CardContainer>
+
+      <CardContainer>
+        <Card style={{height:'400px'}}>
+        <h2>Testimonials</h2>
+        </Card>
+      </CardContainer>
     </>
   );
 };
 
 
+
+const ExpHeading = styled.div`
+      display: flex;
+  align-items: center;
+`
+
+const YearSpan = styled.span`
+font-weight:normal`
+
+
+const ExpTitle = styled.h4`
+font-weight:'bold'`
 
 const HomeContainer = styled.div`
   display: grid;

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav<{ backgroundColor: string }>`
   height:50px;
-  background-color: ${props => props.backgroundColor};
+  background: ${props => props.backgroundColor};
   display: flex;
   justify-content: space-between;
   position:fixed;
