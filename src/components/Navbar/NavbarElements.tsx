@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
-export const Nav = styled.nav<{ backgroundColor: string }>`
+export const Nav = styled.nav<{ backgroundColor: string, isScrolling: boolean }>`
   height:50px;
   background: ${props => props.backgroundColor};
   display: flex;
@@ -11,6 +11,9 @@ export const Nav = styled.nav<{ backgroundColor: string }>`
   padding-right: 5%;
   padding-left: 5%;
   padding-top: 10px;
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ isScrolling }) =>
+    isScrolling ? "translateY(0)" : "translateY(-100%)"};
   z-index: 999;
   @media screen and (max-width: 786px){
     padding-left: 5%;
