@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import * as statements from "../graphql/queries";
 import { useQuery, gql } from "@apollo/client";
+import { ConstructionOutlined } from "@mui/icons-material";
 
 export default () => {
   const ListFavorites = gql`
     ${statements.listFavorites}
   `;
+
   const { loading, error, data } = useQuery(ListFavorites);
   const [SelectedTab, setSelectedTab] = useState("Books");
 
   // Render loading or error messages if any
   if (loading) return <p>Loading...</p>;
-  if (error) console.log(error);
+  if (error) console.log("error at api" ,error);
+
+
 
   const itemTypes = data.listFavorites.items.map(
     (item: any, index: number) => item.type
