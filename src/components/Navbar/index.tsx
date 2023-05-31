@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Nav, NavContact, NavLink, EmptyDiv, Anchor, Sidenav, SidenavContainer, SideMenuItem, UL, NavMenu, NameLink } from "./NavbarElements";
+import { Nav, NavContact, NavLink, Anchor, Sidenav, SidenavContainer, SideMenuItem, UL, NavMenu, NameLink } from "./NavbarElements";
 import ToggleSwitch from "../ToggleSwitch";
 import { AiOutlineLinkedin, AiFillGithub } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -31,13 +31,6 @@ const Navbar = () => {
         };
     }, [scrollPos]);
 
-  function OnClickBackdrop() {
-    setSideNavOpen(false);
-  }
-  
-  const openSideNav = () => {
-    setSideNavOpen(true);
-  };
 
     
   return (
@@ -48,10 +41,10 @@ const Navbar = () => {
     >
         <NavMenu>
         <GiHamburgerMenu onClick={() => setSideNavOpen(!isSideNavOpen)} />
-          <NameLink to={'/'} >Gowtham</NameLink>
         </NavMenu>
-        <EmptyDiv></EmptyDiv>
-        
+          <NameLink to={'/'} >Gowtham</NameLink>
+        {/* <EmptyDiv></EmptyDiv> */}
+      </Nav>
 
       {/* <NavContact>
         <GiHamburgerMenu onClick={openSideNav}/>
@@ -69,8 +62,9 @@ const Navbar = () => {
 
    
         
-    </Nav>
-      {isSideNavOpen && <Sidenav>
+    
+
+      {isSideNavOpen && <Sidenav isScrolling={isScrolling}>
         <p>test</p>
         <UL>
           <li>

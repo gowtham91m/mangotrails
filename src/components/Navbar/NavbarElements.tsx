@@ -8,9 +8,9 @@ export const Nav = styled.nav<{ backgroundColor: string, isScrolling: boolean }>
   display: flex;
   float:left;
   justify-content: left;
-  position:fixed;
-  /* padding-right: 5%; */
-  /* padding-left: 5%; */
+  position:relative;
+  padding-right: 5px;
+  padding-left: 5px;
   padding-top: 10px;
   transition: transform 0.3s ease-in-out;
   transform: ${({ isScrolling }) =>
@@ -22,19 +22,13 @@ export const Nav = styled.nav<{ backgroundColor: string, isScrolling: boolean }>
 `;
 
 export const NavMenu = styled.div`
-  display:flex;
-  width: 15%;
-  float:left;
-`
-export const EmptyDiv = styled.div`
-  width:85%;
+  align-self: center;
+  width: 40px;
 `
 
 export const NameLink = styled(Link)`
   font-size:30px;
-  justify-self: flex-end;
   font-family:cursive;
-  float:left;
   font-weight:bold;
   color: inherit;
   text-decoration: none;
@@ -62,14 +56,10 @@ color: inherit;
   text-decoration: none;`
 
 
-
-
-export const Sidenav = styled.div`
+export const Sidenav = styled.div<{ isScrolling: boolean }>`
   width: 200px;
   height: 100%;
-  /* padding: 5%; */
   float: right;
-  
   position: fixed;
   margin-left: 0%;
   margin-top: 50px;
@@ -86,10 +76,9 @@ export const SideMenuItem = styled.li`
   list-style: none;
   font-size: 20px;
   color: white;
-  padding: 10px;
 `;
 
 export const UL = styled.ul`
   display: block;
-  padding: 30px;
+  padding: 20px;
 `;
