@@ -22,6 +22,7 @@ const Navbar = () => {
     const handleScroll = () => {
         setScrollPos(document.body.getBoundingClientRect().top);
         setIsScrolling(document.body.getBoundingClientRect().top > scrollPos);
+      setSideNavOpen(false);
     };
 
     useEffect(() => {

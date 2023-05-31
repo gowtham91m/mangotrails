@@ -6,13 +6,11 @@ const Artlab = () => {
     return (
         <div>
             <Imgdiv>
-                {/* <img src={UnderConstruction} /> */}
-          <img src= "https://gowthamportfolioimages.s3.us-west-2.amazonaws.com/b.jpeg"/>
+                <img src={UnderConstruction} />
             </Imgdiv>
         </div>
     );
 };
-
 
 const Imgdiv = styled.div`
   display: flex;

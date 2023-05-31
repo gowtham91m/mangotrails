@@ -88,7 +88,7 @@ const HomeContainer = styled.div`
   grid-gap: 2rem;
   border: 2px solid #ccc;
   padding-left: 5%;
-  box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
+  /* box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2); */
   @media screen and (max-width: 767px){
   display: grid;
   padding-left:5%;
@@ -99,7 +99,7 @@ const HomeContainer = styled.div`
                       "Intro"
                       "Experience";
   grid-gap: 2rem;
-  box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2);
+  /* box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2); */
   }
 `;
 
@@ -118,10 +118,10 @@ display: block;
 text-align:left;
 padding:5%;
 border: 1px solid #ccc;
-box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
+/* box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2); */
 @media screen and (max-width: 767px){
   padding: 5%;
-  box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2);
+  /* box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2); */
 }
 `;
 

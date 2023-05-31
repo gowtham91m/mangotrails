@@ -8,7 +8,7 @@ export const Nav = styled.nav<{ backgroundColor: string, isScrolling: boolean }>
   display: flex;
   float:left;
   justify-content: left;
-  position:relative;
+  position: fixed;
   padding-right: 5px;
   padding-left: 5px;
   padding-top: 10px;

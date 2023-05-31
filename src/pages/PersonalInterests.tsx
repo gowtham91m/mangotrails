@@ -86,10 +86,10 @@ const Card = styled.div`
   margin-bottom: 2%;
   padding: 5%;
   border: 1px solid #ccc;
-  box-shadow: 5px 5px 2px 1px rgba(82, 82, 202, 0.2);
+  /* box-shadow: 5px 5px 2px 1px rgba(82, 82, 202, 0.2); */
   @media screen and (max-width: 767px) {
     padding: 5%;
-    box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2);
+    /* box-shadow: 2px 2px 2px 1px rgba(82, 82, 202, 0.2); */
   }
 `;
 
