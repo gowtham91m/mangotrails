@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import GlobalStyle from './globalStyles';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import About from './pages';
+import HomePage from './pages/HomePage';
+import About from './pages/About'
 import PersonalInterests from './pages/PersonalInterests';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -11,7 +12,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import client from './apollo';
 import { ApolloProvider } from '@apollo/client';
 import AppDevelopment from './pages/AppDevelopment';
-import Artlab from './pages/Artlab';
+import Artlab from './pages/ArtGallery';
 
 
 function App() {
@@ -38,12 +39,13 @@ function App() {
       <CssBaseline />
         <Router>
           <GlobalStyle />
-          <Navbar toggleTheme={toggleDarkMode} />
+          <Navbar />
           <Routes>
-            <Route path='/' element={<About />} />
+            <Route path='/' element={<HomePage />} />
+            <Route path='/About' element={<About />} />
             <Route path='/PersonalInterests' element={<PersonalInterests />} />
             <Route path='/AppDevelopment' element={<AppDevelopment />} />
-            <Route path='/Artlab' element={<Artlab />} />
+            <Route path='/ArtGallery' element={<Artlab />} />
           </Routes>
         </Router>
       </ApolloProvider>

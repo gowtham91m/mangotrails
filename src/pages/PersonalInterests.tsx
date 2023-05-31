@@ -17,7 +17,6 @@ export default () => {
   if (error) console.log("error at api" ,error);
 
 
-
   const itemTypes = data.listFavorites.items.map(
     (item: any, index: number) => item.type
   );

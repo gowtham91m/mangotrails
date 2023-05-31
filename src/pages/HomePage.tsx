@@ -11,53 +11,15 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import Constants from '../Constants';
 import { Typography } from '@mui/material';
 
-const About = () => {
+const HomePage = () => {
 
   return (
     <>
       <CardContainer>
-        <HomeContainer>
-            <HomeImage src={ProfilePic}></HomeImage>
-          <Intro><span>`{constants.About.Intro}`</span></Intro>
-        </HomeContainer>
-      </CardContainer>
-
-      <CardContainer>
         <Card>
-        <h3>Experience</h3>
-        <Timeline
-          sx={{
-            [`& .${timelineItemClasses.root}:before`]: {
-              flex: 0,
-              padding: 0,
-            },
-          }}
-        >
-          {Constants.About.Experience.map((exp) =>
-            <TimelineItem key={exp.Position}>
-              <TimelineSeparator>
-                <TimelineDot />
-                <TimelineConnector />
-              </TimelineSeparator>
+        <p>test</p>
 
-              <TimelineContent>
-                <ExpHeading>
-                  <TimelineTitle>{exp.Position} <YearSpan>({exp.year})</YearSpan></TimelineTitle>
-                </ExpHeading>
-
-                <Typography>
-                  {exp.Description}
-                </Typography>
-              </TimelineContent>
-            </TimelineItem>)}
-        </Timeline>
-        </Card>
-      </CardContainer>
-
-      <CardContainer>
-        <Card>
-          <h3>Leisure time activities</h3>
-          <Timeline
+          {/* <Timeline
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {
                 flex: 0,
@@ -76,19 +38,10 @@ const About = () => {
                   <ExpHeading>
                     <TimelineTitle><Anchor href={p.href}>{p.Name}</Anchor></TimelineTitle>
                   </ExpHeading>
-                  <Typography>
-                    {p.Description}
-                  </Typography>
                 </TimelineContent>
               </TimelineItem>)}
 
-          </Timeline>
-        </Card>
-      </CardContainer>
-
-      <CardContainer>
-        <Card style={{height:'400px'}}>
-        <h3>Testimonials</h3>
+          </Timeline> */}
         </Card>
       </CardContainer>
     </>
@@ -138,6 +91,7 @@ const HomeContainer = styled.div`
 const CardContainer = styled.div`
   display:block;
   padding:5%;
+  padding-top:10%;
     @media screen and (max-width: 767px){
       padding-top:10%;
       padding-right:3%;
@@ -159,12 +113,10 @@ box-shadow: 12px 12px 2px 1px rgba(82, 82, 202, 0.2);
 
 
 export const Anchor = styled.a`
-  color: inherit;
-  text-decoration: none;
-  font-weight:bold`
-
-
-
+  /* color: inherit; */
+  /* text-decoration: none; */
+  font-weight:bold
+  `
 
 const HomeImage = styled.img`
 display:flex;
@@ -190,6 +142,6 @@ vertical-align: center;
 
 
 
-export default About;
+export default HomePage;
 
 

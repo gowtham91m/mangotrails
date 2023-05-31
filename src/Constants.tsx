@@ -37,19 +37,27 @@ export default {
     ],
   },
   Colab: {
-    Projects: [
-      {
-        Name: "How is this website built",
-        Description:
-          "A brief system design and tech stack details of this webapp development",
-        href: "./AppDevelopment",
-        FutureUpdates: ["SEO", "Website traffic metrics", "Migrate to next js"],
-      },
-      {
-        Name: "Personal Interests",
-        Description: "Leasure time activities",
-        href: "./PersonalInterests",
-      },
+    Projects: [{
+      Name: "About",
+      href: "./About"
+    },
+    {
+      Name: "How is this website built",
+      Description:
+        "A brief system design and tech stack details of this webapp development",
+      href: "./AppDevelopment",
+      FutureUpdates: ["SEO", "Website traffic metrics", "Migrate to next js"],
+    },
+    {
+      Name: "Personal interests",
+      Description: "Leasure time activities",
+      href: "./PersonalInterests",
+    },
+    {
+      Name: "Art galarry",
+      Description: "Leasure time activities",
+      href: "./ArtGallery",
+    }
     ],
   },
 };
