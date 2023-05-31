@@ -5,7 +5,7 @@ import { setContext } from "apollo-link-context";
 const uri =
   "https://skfzxonmzjcu7agfgki3vcokoi.appsync-api.us-west-2.amazonaws.com/graphql";
 
-const apiKey = "da2-j4f4m24oozh7jdxgjidybb7hvm";
+const apiKey = "da2-skc4ibznyrcftiwevm6syiznhu";
 // Create an Apollo Client instance
 
 const httpLink = createHttpLink({
