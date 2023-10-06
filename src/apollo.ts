@@ -1,12 +1,8 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
-import { setContext } from "apollo-link-context";
 
-// Replace this with your GraphQL endpoint
-const uri =
-  "https://skfzxonmzjcu7agfgki3vcokoi.appsync-api.us-west-2.amazonaws.com/graphql";
-
-const apiKey = "da2-skc4ibznyrcftiwevm6syiznhu";
-// Create an Apollo Client instance
+const uri = "https://svc2mz5uyneshj7hpvo5gwgfpi.appsync-api.us-west-2.amazonaws.com/graphql"
+// const uri = "https://interests.gowtham.live/graphql"
+const apiKey = "da2-gyhsyhiynndxhg36m6bym622b4";
 
 const httpLink = createHttpLink({
   uri: uri,
