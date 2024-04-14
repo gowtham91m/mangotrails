@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     left: 0;
     right: 0;
     color: #b3b3b3;
-    background-color: #0f052b;
+    background-color: #08001e;
 }`
 
 export default GlobalStyle;

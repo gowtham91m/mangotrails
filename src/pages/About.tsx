@@ -10,6 +10,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Constants from '../Constants';
 import { Typography } from '@mui/material';
+import WordCloud from '../components/Wordcloud';
 
 const About = () => {
 
