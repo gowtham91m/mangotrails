@@ -13,14 +13,15 @@ export default () => {
   const [SelectedTab, setSelectedTab] = useState("Books");
 
   // Render loading or error messages if any
+  let uniqueItemTypes: string[] | undefined = undefined;
   if (loading) return <p>Loading...</p>;
-  if (error) console.log("error at api" ,error);
-
-
-  const itemTypes = data.listFavorites.items.map(
-    (item: any, index: number) => item.type
-  );
-  const uniqueItemTypes = Array.from(new Set(itemTypes)).sort() as string[];
+  if (error) console.log("error at api", error);
+  else {
+    const itemTypes = data.listFavorites.items.map(
+      (item: any, index: number) => item.type
+    );
+    uniqueItemTypes = Array.from(new Set(itemTypes)).sort() as string[];
+  }
 
   interface itemType {
     type: string;
@@ -35,7 +36,7 @@ export default () => {
   return (
     <HomeContainer>
       <SubNav>
-        {uniqueItemTypes.map((tab: string, index: number) => (
+        {uniqueItemTypes && uniqueItemTypes.map((tab: string, index: number) => (
           <React.Fragment key={index}>
             <Tabs
               style={{
@@ -52,7 +53,7 @@ export default () => {
         ))}
       </SubNav>
 
-      {data.listFavorites.items.map((item: itemType, index: number) => (
+      {data && data.listFavorites.items.map((item: itemType, index: number) => (
         <React.Fragment key={index}>
           {item.type == SelectedTab && (
             <Card>
