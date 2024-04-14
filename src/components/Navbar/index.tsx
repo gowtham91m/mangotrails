@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Nav, NavContact, NavLink, Anchor, Sidenav, SidenavContainer, SideMenuItem, UL, NavMenu, NameLink } from "./NavbarElements";
-import ToggleSwitch from "../ToggleSwitch";
-import { AiOutlineLinkedin, AiFillGithub } from "react-icons/ai";
+import { Nav, NavLink, Sidenav, UL, NavMenu, NameLink } from "./NavbarElements";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useTheme } from "@material-ui/core/styles";
-import Constants from '../../Constants';
-import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 type Props = {
   toggleTheme: () => void;
@@ -62,11 +57,9 @@ const Navbar = () => {
       </NavContact> */}
 
    
-        
-    
 
       {isSideNavOpen && <Sidenav isScrolling={isScrolling}>
-        <p>test</p>
+
         <UL>
           <li>
             <NavLink to="/" onClick={() => setSideNavOpen(!isSideNavOpen)}>Home</NavLink></li>

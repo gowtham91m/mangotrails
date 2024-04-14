@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
     width:100%;
     left: 0;
     right: 0;
+    color: #b3b3b3;
+    background-color: #0f052b;
 }`
 
 export default GlobalStyle;

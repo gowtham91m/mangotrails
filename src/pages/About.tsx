@@ -54,11 +54,6 @@ const About = () => {
                 </Card>
             </CardContainer>
 
-            <CardContainer>
-                <Card style={{ height: '400px' }}>
-                    <h3>Testimonials</h3>
-                </Card>
-            </CardContainer>
         </>
     );
 };
