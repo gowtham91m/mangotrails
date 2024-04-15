@@ -18,45 +18,42 @@ const About = () => {
       <CardContainer>
         <HomeContainer>
           <HomeImage src={ProfilePic}></HomeImage>
-          
-        <Experience>
-        <Intro>
-            <span>{constants.About.Intro}</span>
-          </Intro>
+          <Experience>
+            <Intro>
+              <span>{constants.About.Intro}</span>
+            </Intro>
 
-          <h3>Experience1</h3>
-          <Timeline
-            sx={{
-              [`& .${timelineItemClasses.root}:before`]: {
-                flex: 0,
-                padding: 0,
-              },
-            }}
-          >
-            {Constants.About.Experience.map((exp) => (
-              <TimelineItem key={exp.Position}>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
+            <h3>Experience1</h3>
+            <Timeline
+              sx={{
+                [`& .${timelineItemClasses.root}:before`]: {
+                  flex: 0,
+                  padding: 0,
+                },
+              }}
+            >
+              {Constants.About.Experience.map((exp) => (
+                <TimelineItem key={exp.Position}>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
 
-                <TimelineContent>
-                  <ExpHeading>
-                    <TimelineTitle>
-                      {exp.Position} <YearSpan>({exp.year})</YearSpan>
-                    </TimelineTitle>
-                  </ExpHeading>
+                  <TimelineContent>
+                    <ExpHeading>
+                      <TimelineTitle>
+                        {exp.Position} <YearSpan>({exp.year})</YearSpan>
+                      </TimelineTitle>
+                    </ExpHeading>
 
-                  <Typography>{exp.Description}</Typography>
-                </TimelineContent>
-              </TimelineItem>
-            ))}
-          </Timeline>
-        </Experience>
+                    <Typography>{exp.Description}</Typography>
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
+            </Timeline>
+          </Experience>
         </HomeContainer>
       </CardContainer>
-
-
     </>
   );
 };
@@ -72,55 +69,43 @@ const CardContainer = styled.div`
 `;
 
 const HomeContainer = styled.div`
-  display: grid;
+  display: block;
   margin-top: 50px;
-  padding-top: 5%;
-  grid-template-areas:
-    "HomeImageContainer Experience Experience Experience";
-  grid-gap: 2rem;
   padding-left: 5%;
 
   @media screen and (max-width: 767px) {
-    display: grid;
+    display: block;
+    margin-top: 50px;
     padding-left: 5%;
     padding-right: 3%;
-    padding-top: 20%;
-    grid-template-areas:
-      "HomeImageContainer"
-      "Experience";
-    grid-gap: 2rem;
-
   }
 `;
 
 const HomeImage = styled.img`
+  padding-left: 30px;
   width: 150px;
-  grid-area: HomeImageContainer;
+  @media screen and (max-width: 767px) {
+    padding-left: 10px;
+  }
 `;
 
 const Intro = styled.div`
-
   padding-bottom: 40px;
   font-size: 18px;
   vertical-align: center;
-  grid-area: Intro;
 `;
 
 const Experience = styled.div`
   display: block;
   text-align: left;
-  grid-area: Experience;
   padding: 5%;
 
   @media screen and (max-width: 767px) {
     padding: 5%;
-
   }
 `;
 
 export const Anchor = styled.a`
-  /* color: inherit; */
-  /* text-decoration: none; */
   font-weight: bold;
 `;
 
