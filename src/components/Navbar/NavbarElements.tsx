@@ -6,18 +6,19 @@ export const Nav = styled.nav<{ isScrolling: boolean }>`
   height:50px;
   display: flex;
   float:left;
-  justify-content: left;
+  justify-content: space-between;
+  width:100%;
   position: fixed;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 90px;
+  padding-left: 8%;
   padding-top: 10px;
   transition: transform 0.3s ease-in-out;
   transform: ${({ isScrolling }) =>
     isScrolling ? "translateY(0)" : "translateY(-100%)"};
   z-index: 999;
   @media screen and (max-width: 786px){
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 15%;
   }
 `;
 
@@ -31,18 +32,20 @@ export const NameLink = styled(Link)`
 `
 
 export const NavContact = styled.div`
-  width: 120px;
+  width: 60px;
   display: flex;
   justify-content: space-between;
   align-self: center;
 `
 export const Anchor = styled.a`
 color: inherit;
-  text-decoration: none;`
+  text-decoration: none;
+  padding: 5px`
 
 
 export const NavMenu = styled.div`
   align-self: center;
+  padding-left: 15px;
   width: 40px;
   z-index: 1001;
 `

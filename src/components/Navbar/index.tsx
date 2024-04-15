@@ -31,7 +31,7 @@ const Navbar = () => {
   }, [scrollPos]);
 
   return (
-    <>
+    <div style={{width:'100%'}}>
       <Nav isScrolling={isScrolling}>
         <NameLink to={"/"}>Gowtham</NameLink>
         <NavContact>
@@ -44,10 +44,11 @@ const Navbar = () => {
           <Anchor href="https://github.com/gowtham91m" target="_blank">
             <AiFillGithub size={25} />
           </Anchor>
-        </NavContact>
-        <NavMenu>
+          <NavMenu>
           <GiHamburgerMenu onClick={() => setSideNavOpen(!isSideNavOpen)} />
         </NavMenu>
+        </NavContact>
+        
       </Nav>
 
       {isSideNavOpen && (
@@ -86,7 +87,7 @@ const Navbar = () => {
           </SideNavContent>
         </Sidenav>
       )}
-    </>
+    </div>
   );
 };
 
