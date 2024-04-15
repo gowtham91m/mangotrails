@@ -86,15 +86,18 @@ const CardContainer = styled.div`
 
 const HomeContainer = styled.div`
   display: block;
-  margin-top: 50px;
+  padding-right: 5%;
+  padding-left: 2%;
+  margin-top: 5%;
   @media screen and (max-width: 767px) {
     display: block;
     margin-top: 50px;
+    padding-left: 0%;
+    padding-right: 1%;
   }
 `;
 
 const HomeImage = styled.img`
-  padding-left: 30px;
   width: 150px;
   @media screen and (max-width: 767px) {
     padding-left: 20px;
@@ -110,11 +113,10 @@ const Intro = styled.div`
 const Experience = styled.div`
   display: block;
   text-align: left;
-  padding-left: 5%;
   padding-top: 5%;
 
   @media screen and (max-width: 767px) {
-    padding-left: 20px;
+    padding-left: 15px;
   }
 `;
 

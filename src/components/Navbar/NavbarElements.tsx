@@ -9,7 +9,7 @@ export const Nav = styled.nav<{ isScrolling: boolean }>`
   justify-content: space-between;
   width:100%;
   position: fixed;
-  padding-right: 90px;
+  padding-right: 9%;
   padding-left: 8%;
   padding-top: 10px;
   transition: transform 0.3s ease-in-out;

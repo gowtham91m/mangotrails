@@ -6,7 +6,6 @@ import {
   NameLink,
   NavMenu,
   Sidenav,
-  SideNavContent,
   NavLink,
 } from "./NavbarElements";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -31,7 +30,7 @@ const Navbar = () => {
   }, [scrollPos]);
 
   return (
-    <div style={{width:'100%'}}>
+    <div style={{ width: "100%" }}>
       <Nav isScrolling={isScrolling}>
         <NameLink to={"/"}>Gowtham</NameLink>
         <NavContact>
@@ -45,36 +44,34 @@ const Navbar = () => {
             <AiFillGithub size={25} />
           </Anchor>
           <NavMenu>
-          <GiHamburgerMenu onClick={() => setSideNavOpen(!isSideNavOpen)} />
-        </NavMenu>
+            <GiHamburgerMenu onClick={() => setSideNavOpen(!isSideNavOpen)} />
+          </NavMenu>
         </NavContact>
-        
       </Nav>
 
       {isSideNavOpen && (
         <Sidenav isScrolling={isScrolling}>
           <NavLink to="/" onClick={() => setSideNavOpen(!isSideNavOpen)}>
-                Home
-              </NavLink>
-              <NavLink
-                to="/PersonalInterests"
-                onClick={() => setSideNavOpen(!isSideNavOpen)}
-              >
-                PersonalInterests
-              </NavLink>
-              <NavLink
-                to="/AppDevelopment"
-                onClick={() => setSideNavOpen(!isSideNavOpen)}
-              >
-                AppDevelopment
-              </NavLink>
-              <NavLink
-                to="/ArtGallery"
-                onClick={() => setSideNavOpen(!isSideNavOpen)}
-              >
-                ArtGallery
-              </NavLink>
-
+            Home
+          </NavLink>
+          <NavLink
+            to="/PersonalInterests"
+            onClick={() => setSideNavOpen(!isSideNavOpen)}
+          >
+            PersonalInterests
+          </NavLink>
+          <NavLink
+            to="/AppDevelopment"
+            onClick={() => setSideNavOpen(!isSideNavOpen)}
+          >
+            AppDevelopment
+          </NavLink>
+          <NavLink
+            to="/ArtGallery"
+            onClick={() => setSideNavOpen(!isSideNavOpen)}
+          >
+            ArtGallery
+          </NavLink>
         </Sidenav>
       )}
     </div>
