@@ -23,7 +23,7 @@ const About = () => {
               <span>{constants.About.Intro}</span>
             </Intro>
 
-            <h3>Experience1</h3>
+            <h3>Experience</h3>
             <Timeline
               sx={{
                 [`& .${timelineItemClasses.root}:before`]: {
@@ -31,6 +31,7 @@ const About = () => {
                   padding: 0,
                 },
               }}
+              style={{ paddingLeft: "0px" }}
             >
               {Constants.About.Experience.map((exp) => (
                 <TimelineItem key={exp.Position}>
@@ -45,7 +46,6 @@ const About = () => {
                         {exp.Position} <YearSpan>({exp.year})</YearSpan>
                       </TimelineTitle>
                     </ExpHeading>
-
                     <Typography>{exp.Description}</Typography>
                   </TimelineContent>
                 </TimelineItem>
@@ -60,24 +60,20 @@ const About = () => {
 
 const CardContainer = styled.div`
   display: block;
-  padding: 5%;
+  padding-top: 50px;
+  padding-left: 5%;
   @media screen and (max-width: 767px) {
     padding-top: 10%;
-    padding-right: 3%;
-    padding-left: 3%;
+    padding-left: 0%;
   }
 `;
 
 const HomeContainer = styled.div`
   display: block;
   margin-top: 50px;
-  padding-left: 5%;
-
   @media screen and (max-width: 767px) {
     display: block;
     margin-top: 50px;
-    padding-left: 5%;
-    padding-right: 3%;
   }
 `;
 
@@ -85,7 +81,7 @@ const HomeImage = styled.img`
   padding-left: 30px;
   width: 150px;
   @media screen and (max-width: 767px) {
-    padding-left: 10px;
+    padding-left: 20px;
   }
 `;
 
@@ -98,10 +94,11 @@ const Intro = styled.div`
 const Experience = styled.div`
   display: block;
   text-align: left;
-  padding: 5%;
+  padding-left: 5%;
+  padding-top: 5%;
 
   @media screen and (max-width: 767px) {
-    padding: 5%;
+    padding-left: 20px;
   }
 `;
 

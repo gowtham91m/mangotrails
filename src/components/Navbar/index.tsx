@@ -52,7 +52,7 @@ const Navbar = () => {
 
       {isSideNavOpen && (
         <Sidenav isScrolling={isScrolling}>
-          <SideNavContent>
+          <SideNavContent style={{listStyle:"none"}}>
             <li>
               <NavLink to="/" onClick={() => setSideNavOpen(!isSideNavOpen)}>
                 Home
