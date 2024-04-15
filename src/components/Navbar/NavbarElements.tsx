@@ -53,6 +53,7 @@ export const NavMenu = styled.div`
 export const NavLink = styled(Link)`
   font-size:20px;
   justify-self: flex-end;
+  font-weight:bold;
   float:left;
   color: white;
   padding: 5px;
@@ -71,18 +72,7 @@ export const Sidenav = styled.div<{ isScrolling: boolean }>`
   z-index: 1000;
   display: flex;
   text-align: center;
+  list-style:none;
+  flex-direction: column; // New line
+  align-items: center; // New line
 `;
-
-export const SideNavContent = styled.div`
-`;
-
-// export const SidenavContainer = styled.div`
-//   margin: 0 auto;
-// `;
-
-// export const SideMenuItem = styled.li`
-//   list-style: none;
-//   font-size: 20px;
-//   color: white;
-// `;
-

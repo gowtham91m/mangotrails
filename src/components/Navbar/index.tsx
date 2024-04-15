@@ -53,38 +53,28 @@ const Navbar = () => {
 
       {isSideNavOpen && (
         <Sidenav isScrolling={isScrolling}>
-          <SideNavContent style={{listStyle:"none"}}>
-            <li>
-              <NavLink to="/" onClick={() => setSideNavOpen(!isSideNavOpen)}>
+          <NavLink to="/" onClick={() => setSideNavOpen(!isSideNavOpen)}>
                 Home
               </NavLink>
-            </li>
-
-            <li>
               <NavLink
                 to="/PersonalInterests"
                 onClick={() => setSideNavOpen(!isSideNavOpen)}
               >
                 PersonalInterests
               </NavLink>
-            </li>
-            <li>
               <NavLink
                 to="/AppDevelopment"
                 onClick={() => setSideNavOpen(!isSideNavOpen)}
               >
                 AppDevelopment
               </NavLink>
-            </li>
-            <li>
               <NavLink
                 to="/ArtGallery"
                 onClick={() => setSideNavOpen(!isSideNavOpen)}
               >
                 ArtGallery
               </NavLink>
-            </li>
-          </SideNavContent>
+
         </Sidenav>
       )}
     </div>
