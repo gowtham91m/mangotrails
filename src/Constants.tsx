@@ -8,12 +8,14 @@ export default {
         Position: "Amazon - Software Development Engineer",
         Description:
           "Fullstack development of Amazon pharmacy signup component. Implemented reusable CDK components to reate aws infrastructure for ETL data pipeliens for amazon support center. ",
+        Tags: ["Java", "Spring-boot", "React", "CDK", "Lambda", "EC2", "DynamoDB"],
       },
       {
         year: 2017,
         Position: "Latentview Analytics - Data Scientist",
         Description:
           "Had an exposure to work on digital marketing of google ad products. Performed statistical analysis on Direct email marketing data to promote products to small and medium business.",
+          Tags: ["Python", "R", "SQL", "Tableau"],
       },
       {
         year: 2016,
@@ -21,18 +23,21 @@ export default {
           "Oklohama State University Alumni Association - Data Analyst Intern",
         Description:
           "Responsible for managing alumni association dataabase. Develop automation for data management, etl. Provide data driven insights on new marketing initiatives. Create tableau dashboards to monitor business KPI's",
+          Tags: ["Python", "SQL", "Tableau"],
       },
       {
         year: 2015,
         Position: "Oklohama State University - Masters in Information Systems",
         Description:
           "Had an opportunity to learn statistics, data analytics and machine learning",
+          Tags: ["Python", "R", "SQL", "Tableau"],
       },
       {
         year: 2012,
         Position: "Accenture - Software Development Engineer",
         Description:
           "Developed application logic for a CRM application for new telecom initiatives using Oracle PL/SQL",
+          Tags: ["Oracle", "PL/SQL", "Java"],
       },
     ],
   },

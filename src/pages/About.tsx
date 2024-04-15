@@ -47,6 +47,11 @@ const About = () => {
                       </TimelineTitle>
                     </ExpHeading>
                     <Typography>{exp.Description}</Typography>
+                    <div style={{ display: "flex", flexWrap: "wrap" }}>
+                      {exp.Tags.map((tag) => (
+                        <Tags>{tag}</Tags>
+                      ))}
+                    </div>
                   </TimelineContent>
                 </TimelineItem>
               ))}
@@ -57,6 +62,17 @@ const About = () => {
     </>
   );
 };
+
+const Tags = styled.span`
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  margin: 2px;
+  background-color: rgba(0, 128, 128, 0.1); /* Teal tint with 10% opacity */
+  font-size: 0.75rem;
+  font-weight: medium;
+  line-height: 0.5;
+  color: #20c997; /* Teal color */
+`;
 
 const CardContainer = styled.div`
   display: block;
