@@ -106,6 +106,7 @@ const HomeImage = styled.img`
   width: 150px;
   position: absolute;
   top: 180px;
+  object-fit: contain;
   @media screen and (max-width: 767px) {
     padding-left: 20px;
   }
