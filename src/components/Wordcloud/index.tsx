@@ -10,7 +10,7 @@ const options: OptionsProp = {
     fontSizes: [20, 60],
     fontStyle: "normal",
     fontWeight: "normal",
-    padding: 0,
+    padding: 5,
     rotations: 10,
     rotationAngles: [0, 0],
     scale: "sqrt",
@@ -21,7 +21,9 @@ const options: OptionsProp = {
 
 const WordCloud= ()=> {
     
-    return  <ReactWordcloud options={options} words={words} />
+    return  <div style={{ width: '100%', height: '200px', marginRight: "10px"}}>
+      <ReactWordcloud options={options} words={words} />
+      </div>
 }
 
 export default WordCloud;

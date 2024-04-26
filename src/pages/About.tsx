@@ -18,6 +18,7 @@ const About = () => {
       <CardContainer>
         <HomeContainer>
           <HomeImage src={ProfilePic}></HomeImage>
+          <WordCloud />
           <Experience>
             <Intro>
               <span>{constants.About.Intro}</span>
@@ -31,21 +32,19 @@ const About = () => {
                   padding: 0,
                 },
               }}
-              style={{ paddingLeft: "0px" }}
+              style={{ padding: "0px" }}
             >
               {Constants.About.Experience.map((exp) => (
-                <TimelineItem key={exp.Position}>
+                <TimelineItem key={exp.Position} style={{ margin: "0px" }}>
                   <TimelineSeparator>
                     <TimelineDot />
                     <TimelineConnector />
                   </TimelineSeparator>
 
                   <TimelineContent>
-                    <ExpHeading>
-                      <TimelineTitle>
-                        {exp.Position} <YearSpan>({exp.year})</YearSpan>
-                      </TimelineTitle>
-                    </ExpHeading>
+                    <TimelineTitle>
+                      {exp.Position} <YearSpan>({exp.year})</YearSpan>
+                    </TimelineTitle>
                     <Typography>{exp.Description}</Typography>
                     <div style={{ display: "flex", flexWrap: "wrap" }}>
                       {exp.Tags.map((tag) => (
@@ -57,6 +56,7 @@ const About = () => {
               ))}
             </Timeline>
           </Experience>
+          <div style={{ marginBottom: "100px" }}></div>
         </HomeContainer>
       </CardContainer>
     </>
@@ -108,6 +108,7 @@ const Intro = styled.div`
   padding-bottom: 40px;
   font-size: 18px;
   vertical-align: center;
+  padding-right: 10px
 `;
 
 const Experience = styled.div`
@@ -124,17 +125,13 @@ export const Anchor = styled.a`
   font-weight: bold;
 `;
 
-const ExpHeading = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 const YearSpan = styled.span`
   font-weight: normal;
 `;
 
 const TimelineTitle = styled.h4`
   font-weight: "bold";
+  padding-bottom: 5px;
 `;
 
 export default About;

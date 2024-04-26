@@ -9,8 +9,8 @@ export const Nav = styled.nav<{ isScrolling: boolean }>`
   justify-content: space-between;
   width:100%;
   position: fixed;
-  padding-right: 9%;
-  padding-left: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-top: 10px;
   transition: transform 0.3s ease-in-out;
   transform: ${({ isScrolling }) =>
@@ -18,7 +18,7 @@ export const Nav = styled.nav<{ isScrolling: boolean }>`
   z-index: 999;
   @media screen and (max-width: 786px){
     padding-left: 10px;
-    padding-right: 15%;
+    padding-right: 5%;
   }
 `;
 
@@ -32,7 +32,7 @@ export const NameLink = styled(Link)`
 `
 
 export const NavContact = styled.div`
-  width: 60px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-self: center;

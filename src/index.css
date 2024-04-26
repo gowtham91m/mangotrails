@@ -4,8 +4,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin:auto;
-  /* max-width:1800px; */
+  margin:0 auto;
+  max-width:1300px;
 }
 
 code {

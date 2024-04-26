@@ -34,6 +34,7 @@ const Navbar = () => {
       <Nav isScrolling={isScrolling}>
         <NameLink to={"/"}>Gowtham</NameLink>
         <NavContact>
+          <div style={{width:"100%"}}></div>
           <Anchor
             href="https://www.linkedin.com/in/gowtham-mallikarjuna/"
             target="_blank"
