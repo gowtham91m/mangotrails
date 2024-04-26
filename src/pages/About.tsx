@@ -17,8 +17,10 @@ const About = () => {
     <>
       <CardContainer>
         <HomeContainer>
-          <HomeImage src={ProfilePic}></HomeImage>
-          <WordCloud />
+          <div>
+            <WordCloud />
+            <HomeImage src={ProfilePic}></HomeImage>
+          </div>
           <Experience>
             <Intro>
               <span>{constants.About.Intro}</span>
@@ -35,7 +37,10 @@ const About = () => {
               style={{ padding: "0px" }}
             >
               {Constants.About.Experience.map((exp) => (
-                <TimelineItem key={exp.Position} style={{ margin: "0px" }}>
+                <TimelineItem
+                  key={exp.Position}
+                  style={{ margin: "0px", paddingBottom: "10px" }}
+                >
                   <TimelineSeparator>
                     <TimelineDot />
                     <TimelineConnector />
@@ -99,16 +104,19 @@ const HomeContainer = styled.div`
 
 const HomeImage = styled.img`
   width: 150px;
+  position: absolute;
+  top: 180px;
   @media screen and (max-width: 767px) {
     padding-left: 20px;
   }
 `;
 
 const Intro = styled.div`
+  margin-top: 30px;
   padding-bottom: 40px;
   font-size: 18px;
   vertical-align: center;
-  padding-right: 10px
+  padding-right: 10px;
 `;
 
 const Experience = styled.div`
