@@ -1,6 +1,6 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
-// 
-// const uri = "https://wk4ssk2jlffftn2vowjbs6abyq.appsync-api.us-west-2.amazonaws.com/graphql"
+
+// const uri = "https://s7khucuo7zf63p3upejpqllyqe.appsync-api.us-east-1.amazonaws.com/graphql"
 const uri = "https://interests.gowtham.live/graphql"
 const apiKey = "da2-7qhkm3k2fvaolb2rnakedv3nda";
 

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import * as statements from "../graphql/queries";
 import { useQuery, gql } from "@apollo/client";
-import { ConstructionOutlined } from "@mui/icons-material";
 
 export default () => {
   const ListFavorites = gql`
@@ -10,7 +9,7 @@ export default () => {
   `;
 
   const { loading, error, data } = useQuery(ListFavorites);
-  const [SelectedTab, setSelectedTab] = useState("Books");
+  const [SelectedTab, setSelectedTab] = useState("Anime");
 
   // Render loading or error messages if any
   let uniqueItemTypes: string[] | undefined = undefined;
@@ -36,39 +35,43 @@ export default () => {
   return (
     <HomeContainer>
       <SubNav>
-        {uniqueItemTypes && uniqueItemTypes.map((tab: string, index: number) => (
-          <React.Fragment key={index}>
-            <Tabs
-              style={{
-                opacity: tab == SelectedTab ? 1 : 0.7,
-                fontWeight: tab == SelectedTab ? "bold" : "normal",
-              }}
-              onClick={() => {
-                setSelectedTab(tab);
-              }}
-            >
-              {tab}
-            </Tabs>
-          </React.Fragment>
-        ))}
+        {uniqueItemTypes &&
+          uniqueItemTypes.map((tab: string, index: number) => (
+            <React.Fragment key={index}>
+              <Tabs
+                style={{
+                  opacity: tab == SelectedTab ? 1 : 0.7,
+                  fontWeight: tab == SelectedTab ? "bold" : "normal",
+                }}
+                onClick={() => {
+                  setSelectedTab(tab);
+                }}
+              >
+                {tab}
+              </Tabs>
+            </React.Fragment>
+          ))}
       </SubNav>
 
-      {data && data.listFavorites.items.map((item: itemType, index: number) => (
-        <React.Fragment key={index}>
-          {item.type == SelectedTab && (
-            <Card>
-              <Image src={item.image} />
-              <DetailsDiv>
-                <ul>Name: {item.title}</ul>
-                <ul>Description: {item.description}</ul>
-                <ul>Rating: {item.rating}</ul>
-                {item.author != null && <ul>Author: {item.author}</ul>}
-                {item.genre != null && <ul>Genre: {item.genre}</ul>}
-              </DetailsDiv>
-            </Card>
-          )}
-        </React.Fragment>
-      ))}
+      {data &&
+        data.listFavorites.items.map((item: itemType, index: number) => (
+          <React.Fragment key={index}>
+            {item.type == SelectedTab && (
+              <Card>
+                <Image src={item.image} />
+                <DetailsDiv>
+                  <ul>Name: {item.title}</ul>
+                  <ul>Rating: {item.rating}</ul>
+                  {item.author != null && <ul>Author: {item.author}</ul>}
+                  {item.genre != null && <ul>Genre: {item.genre}</ul>}
+                  {item.description != null && (
+                    <ul>Description: {item.description}</ul>
+                  )}
+                </DetailsDiv>
+              </Card>
+            )}
+          </React.Fragment>
+        ))}
     </HomeContainer>
   );
 };
@@ -111,6 +114,9 @@ const Tabs = styled.span`
 
 const Image = styled.img`
   width: 100px;
+  height: 135px;
 `;
 
-const DetailsDiv = styled.div``;
+const DetailsDiv = styled.div`
+  width: 100%;
+`;
