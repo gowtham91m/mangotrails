@@ -66,10 +66,9 @@ export const Sidenav = styled.div<{ isScrolling: boolean }>`
   width: 100%;
   height: 100%;
   position: fixed;
-  padding-top: 15%;
-  margin-top: 50px;
+  padding-top: 10%;
   opacity: 90%;
-  z-index: 1000;
+  z-index: 998;
   display: flex;
   text-align: center;
   list-style:none;

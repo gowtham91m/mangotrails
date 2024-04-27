@@ -15,6 +15,7 @@ export const getFavorites = /* GraphQL */ `
     }
   }
 `;
+
 export const listFavorites = /* GraphQL */ `
   query ListFavorites(
     $filter: TableFavoritesFilterInput
@@ -35,3 +36,5 @@ export const listFavorites = /* GraphQL */ `
     }
   }
 `;
+
+

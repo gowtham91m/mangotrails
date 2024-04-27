@@ -115,6 +115,7 @@ const Tabs = styled.span`
 const Image = styled.img`
   width: 100px;
   height: 135px;
+  align-self: center;
 `;
 
 const DetailsDiv = styled.div`

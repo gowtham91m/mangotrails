@@ -34,7 +34,7 @@ const Navbar = () => {
       <Nav isScrolling={isScrolling}>
         <NameLink to={"/"}>Gowtham</NameLink>
         <NavContact>
-          <div style={{width:"100%"}}></div>
+          <div style={{ width: "100%" }}></div>
           <Anchor
             href="https://www.linkedin.com/in/gowtham-mallikarjuna/"
             target="_blank"
@@ -51,7 +51,10 @@ const Navbar = () => {
       </Nav>
 
       {isSideNavOpen && (
-        <Sidenav isScrolling={isScrolling}>
+        <Sidenav
+          isScrolling={isScrolling}
+          onClick={() => setSideNavOpen(!isSideNavOpen)}
+        >
           <NavLink to="/" onClick={() => setSideNavOpen(!isSideNavOpen)}>
             Home
           </NavLink>
