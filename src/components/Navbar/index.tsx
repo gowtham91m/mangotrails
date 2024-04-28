@@ -30,7 +30,7 @@ const Navbar = () => {
   }, [scrollPos]);
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%", height: "20px"}}>
       <Nav isScrolling={isScrolling}>
         <NameLink to={"/"}>Gowtham</NameLink>
         <NavContact>

@@ -1,5 +1,4 @@
-import { url } from 'inspector';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -9,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     margin:0 auto;
     color: #b3b3b3;
     background-color: rgb(15 23 42);
+    line-height: 1.5;
 }`
 
 export default GlobalStyle;
