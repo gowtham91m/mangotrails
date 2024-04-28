@@ -37,19 +37,20 @@ export default () => {
       <SubNav>
         {uniqueItemTypes &&
           uniqueItemTypes.map((tab: string, index: number) => (
-            <React.Fragment key={index}>
-              <Tabs
+              <div
                 style={{
                   opacity: tab == SelectedTab ? 1 : 0.7,
                   fontWeight: tab == SelectedTab ? "bold" : "normal",
+                  padding: "20px",
+                  cursor: "default",
                 }}
                 onClick={() => {
                   setSelectedTab(tab);
                 }}
+                key={index}
               >
                 {tab}
-              </Tabs>
-            </React.Fragment>
+              </div>
           ))}
       </SubNav>
 
@@ -77,11 +78,9 @@ export default () => {
 };
 
 const HomeContainer = styled.div`
-  padding: 10%;
   @media screen and (max-width: 767px) {
-    padding-top: 15%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 `;
 const Card = styled.div`

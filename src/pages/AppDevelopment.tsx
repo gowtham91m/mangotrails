@@ -16,6 +16,8 @@ export default () => {
             style={{
               opacity: tab == SelectedTab ? 1 : 0.7,
               fontWeight: tab == SelectedTab ? "bold" : "normal",
+              padding: "20px",
+              cursor: "default",
             }}
             onClick={() => {
               setSelectedTab(tab);
@@ -27,7 +29,7 @@ export default () => {
         ))}
       </SubNav>
       <Card style={{ height: "700px" }}>
-        <Image src={UnderConstruction}></Image>
+        <Image src={UnderConstruction} style={{height:"300px"}}></Image>
       </Card>
     </HomeContainer>
   );
@@ -70,8 +72,7 @@ const Tabs = styled.text`
 `;
 
 const Image = styled.img`
-  width: 70%;
-  height: 50%;
+  width: 100%;
 `;
 
 const DetailsDiv = styled.div``;

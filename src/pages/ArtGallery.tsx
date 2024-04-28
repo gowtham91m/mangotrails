@@ -1,31 +1,11 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import UnderConstruction from '../images/UnderConstruction.png'
+import UnderConstruction from "../images/UnderConstruction.png";
 
 const Artlab = () => {
-    return (
-        <div>
-            <Imgdiv>
-                <img src={UnderConstruction} />
-            </Imgdiv>
-        </div>
-    );
+  return (
+      <img src={UnderConstruction} style={{width:"70%"}}/>
+  );
 };
 
-const Imgdiv = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-  > img {
-    width :500px ;
-    }
-    
-  @media only screen and (max-width: 1000px) {
-      > img {
-        width : 400px;
-      }
-    }
-`;
-
 export default Artlab;
-
