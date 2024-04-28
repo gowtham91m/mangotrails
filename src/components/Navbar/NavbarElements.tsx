@@ -6,6 +6,7 @@ export const Nav = styled.nav<{ isScrolling: boolean }>`
   display: flex;
   float:left;
   box-sizing: border-box;
+  position: relative;
   justify-content: space-between;
   width:100%;
   padding-left: 7%;
@@ -68,9 +69,13 @@ export const Sidenav = styled.div<{ isScrolling: boolean }>`
   padding-top: 10%;
   opacity: 90%;
   z-index: 998;
+  line-height: 40px;
   display: flex;
   text-align: center;
-  list-style:none;
   flex-direction: column; // New line
   align-items: center; // New line
+  background-color: rgb(15 23 42);
+  @media screen and (max-width: 786px){
+    padding-top: 30%;
+  }
 `;

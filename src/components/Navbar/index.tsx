@@ -30,7 +30,7 @@ const Navbar = () => {
   }, [scrollPos]);
 
   return (
-    <div style={{ width: "100%", height: "20px"}}>
+    <div style={{ width: "100%", height: "20px", position: "relative"}}>
       <Nav isScrolling={isScrolling}>
         <NameLink to={"/"}>Gowtham</NameLink>
         <NavContact>
@@ -55,6 +55,7 @@ const Navbar = () => {
           isScrolling={isScrolling}
           onClick={() => setSideNavOpen(!isSideNavOpen)}
         >
+          
           <NavLink to="/" onClick={() => setSideNavOpen(!isSideNavOpen)}>
             Home
           </NavLink>
@@ -76,6 +77,7 @@ const Navbar = () => {
           >
             ArtGallery
           </NavLink>
+          
         </Sidenav>
       )}
     </div>
