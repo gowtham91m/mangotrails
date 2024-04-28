@@ -1,5 +1,4 @@
 import React from "react";
-import GlobalStyle from "./globalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
@@ -12,9 +11,7 @@ import Artlab from "./pages/ArtGallery";
 function App() {
   return (
     <ApolloProvider client={client}>
-      {/* <CssBaseline /> */}
       <Router>
-        <GlobalStyle />
         <Navbar />
         <Routes>
           <Route path="/" element={<About />} />

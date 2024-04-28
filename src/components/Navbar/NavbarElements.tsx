@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 export const Nav = styled.nav<{ isScrolling: boolean }>`
-  height:50px;
   display: flex;
   float:left;
+  box-sizing: border-box;
   justify-content: space-between;
   width:100%;
-  position: fixed;
-  padding-left: 5%;
+  padding-left: 7%;
   padding-right: 5%;
   padding-top: 10px;
   transition: transform 0.3s ease-in-out;
