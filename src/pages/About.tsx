@@ -84,7 +84,7 @@ const CardContainer = styled.div`
   padding-top: 50px;
   padding-left: 5%;
   @media screen and (max-width: 767px) {
-    padding-top: 10%;
+    padding-top: 4%;
     padding-left: 0%;
   }
 `;
@@ -124,8 +124,8 @@ const Experience = styled.div`
   display: block;
   text-align: left;
   padding-top: 5%;
-
   @media screen and (max-width: 767px) {
+    padding-top: 40px;
     padding-left: 15px;
   }
 `;
