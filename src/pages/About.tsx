@@ -98,7 +98,38 @@ const About = () => {
           </div>
         ))}
       </Experience>
-      <div style={{ marginBottom: "100px" }}></div>
+
+      <div
+        style={{
+          marginBottom: "100px",
+          marginTop: "50px",
+          marginLeft: "15px",
+          marginRight: "15px",
+        }}
+      >
+        <h3 style={{ paddingBottom: "10px" }}>Projects</h3>
+
+        <div
+          style={{
+            // height: "100%",
+            // width: "100%",
+            maxWidth: "400px",
+            border: "1px solid #ccc",
+            textAlign: "center",
+            position: "relative",
+            padding: "20px",
+            paddingBottom: "40px",
+          }}
+        >
+          <h4>Simple todo plugin </h4>
+          <p>
+            Simple todo plugin to manage todo task list that popup on browser.
+            with features to add new task, edit or delete existing tasks, mark
+            them complete and also re arragne them as the priority changes{" "}
+          </p>
+          <a href="https://chromewebstore.google.com/detail/simple-todo-popup/paepbcgpkkeboklgnhnpaccoogpdllbf?hl=en-GB&authuser=0">Chrome web store ⬈</a>
+        </div>
+      </div>
     </HomeContainer>
   );
 };
