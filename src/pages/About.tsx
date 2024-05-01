@@ -111,23 +111,35 @@ const About = () => {
 
         <div
           style={{
-            // height: "100%",
-            // width: "100%",
             maxWidth: "400px",
             border: "1px solid #ccc",
             textAlign: "center",
             position: "relative",
             padding: "20px",
             paddingBottom: "40px",
+            display: "flex",
+            flexDirection: "column",
           }}
         >
-          <h4>Simple todo plugin </h4>
+          <h4 style={{ marginBottom: "0px" }}>Simple todo plugin </h4>
           <p>
             Simple todo plugin to manage todo task list that popup on browser.
             with features to add new task, edit or delete existing tasks, mark
             them complete and also re arragne them as the priority changes{" "}
           </p>
-          <a href="https://chromewebstore.google.com/detail/simple-todo-popup/paepbcgpkkeboklgnhnpaccoogpdllbf?hl=en-GB&authuser=0">Chrome web store ⬈</a>
+          <a
+            href="https://chromewebstore.google.com/detail/simple-todo-popup/paepbcgpkkeboklgnhnpaccoogpdllbf?hl=en-GB&authuser=0"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            Chrome web store ⬈
+          </a>
+
+          <a
+            href="https://addons.mozilla.org/en-US/firefox/addon/simple-todo-popup/"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            Firefox addon ⬈
+          </a>
         </div>
       </div>
     </HomeContainer>
