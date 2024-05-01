@@ -64,6 +64,7 @@ export const NavLink = styled(Link)`
 
 export const Sidenav = styled.div<{ isScrolling: boolean }>`
   width: 100%;
+  max-width: 1300px;
   height: 100%;
   position: fixed;
   padding-top: 10%;
